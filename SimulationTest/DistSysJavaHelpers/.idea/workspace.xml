@@ -10,7 +10,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="71" />
@@ -58,7 +58,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="71" y="25" width="1849" height="1055" extended-state="6" />
+    <frame x="71" y="25" width="1849" height="1055" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Image Layers" />
       <window_info id="Designer" />

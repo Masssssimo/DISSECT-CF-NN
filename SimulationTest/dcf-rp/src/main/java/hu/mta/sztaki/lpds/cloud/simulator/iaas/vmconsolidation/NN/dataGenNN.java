@@ -38,7 +38,7 @@ public class dataGenNN {
         Timed.simulateUntilLastEvent();
         VirtualAppliance va = new VirtualAppliance("BASE-VA", 1000, 0, false, 10000l);
         cloud.repositories.get(0).registerObject(va);
-        ConstantConstraints minCaps = new ConstantConstraints(1.13, 0.001, true, 99999999L);
+        ConstantConstraints minCaps = new ConstantConstraints(0.13, 0.001, true, 99999999L);
         cloud.requestVM(va, minCaps, cloud.repositories.get(0), amountVM);
         Timed.simulateUntilLastEvent();
 
