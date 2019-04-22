@@ -1253,6 +1253,7 @@ public class VirtualMachine extends MaxMinConsumer {
 	 */
 	@Override
 	public String toString() {
+		//return Integer.toString(hashCode());
 		return "VM(" + currState + " " + ra + " " + super.toString() + ")";
 	}
 }

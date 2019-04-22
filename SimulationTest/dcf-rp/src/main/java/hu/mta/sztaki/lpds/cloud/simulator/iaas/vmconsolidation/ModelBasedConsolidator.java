@@ -10,6 +10,7 @@ import java.util.Properties;
 
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.IaaSService;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.PhysicalMachine;
+import hu.mta.sztaki.lpds.cloud.simulator.iaas.VirtualMachine;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.consolidation.Consolidator;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.consolidation.SimpleConsolidator;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.pmscheduling.IControllablePmScheduler;
@@ -23,13 +24,13 @@ import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.model.ModelVM;
 
 /**
  * @author Julian Bellendorf, Rene Ponto, Zoltan Mann
- * 
+ *
  *         This class gives the necessary variables and methods for VM
  *         consolidation. The main idea is to make an abstract model out of the
  *         given PMs and its VMs with the original properties and let an
  *         algorithm (optimize) do the new placement of the VMs in order to save
  *         power by shutting down unused PMs.
- * 
+ *
  *         After the optimization is done the differences of the ModelPMs /
  *         ModelVMs are calculated and the necessary respective changes are
  *         saved inside Action- Classes. Afterwards a graph is created with an
@@ -48,7 +49,7 @@ public abstract class ModelBasedConsolidator extends Consolidator {
 	 * The constructor for VM consolidation. It expects an IaaSService, a value for
 	 * the upper threshold, a value for the lower threshold and a variable which
 	 * says how often the consolidation shall occur.
-	 * 
+	 *
 	 * @param toConsolidate The used IaaSService.
 	 * @param consFreq      This value determines, how often the consolidation
 	 *                      should run.
@@ -73,7 +74,7 @@ public abstract class ModelBasedConsolidator extends Consolidator {
 	 * respective changes are saved inside Action-Classes. Afterwards a graph is
 	 * created with an ordered list of all actions. At last the graph is being
 	 * executed and the changes are made to the non-abstract IaaS-System.
-	 * 
+	 *
 	 * @param pmList All PMs which are currently registered in the IaaS service.
 	 */
 	protected void doConsolidation(final PhysicalMachine[] pmList) {
@@ -83,9 +84,33 @@ public abstract class ModelBasedConsolidator extends Consolidator {
 				return;
 			}
 		}
+
+		for(int i=0;i<pmList.length;i++) {
+			for(int j=0;j<pmList[i].numofCurrentVMs();j++){
+				System.out.println("\tVM-"+pmList[i].listVMs().toArray()[j].toString()+"\t Hosting PM-"+pmList[i].toString());
+			}
+		}
+
 		final InfrastructureModel input = new InfrastructureModel(pmList, lowerThreshold,
 				false, upperThreshold);
 		InfrastructureModel solution = optimize(input);
+		/*
+		System.err.println("INPUT\t"+input.hashCode());
+		System.out.println("Solution\t"+solution.hashCode());
+
+		 */
+
+		/* Before consolidation
+		for(int i=0;i<solution.items.length;i++) {
+			System.out.println("A-VM-" + solution.items[i].hashCode() + "\t->\tA-HOST-" + solution.items[i].getHostID());
+		}
+
+		// input consolidation
+		for(int i=0;i<solution.items.length;i++) {
+			System.err.println("I-VM-" + input.items[i].hashCode() + "\t->\tI-HOST-" + input.items[i].getHostID());
+		}
+		 */
+
 		if (solution.isBetterThan(input)) {
 			previousActions = modelDiff(solution);
 			// Logger.getGlobal().info("Number of actions: "+actions.size());
@@ -93,6 +118,11 @@ public abstract class ModelBasedConsolidator extends Consolidator {
 			// printGraph(actions);
 			performActions();
 		}
+		/* After consolidation
+		for(int i=0;i<solution.items.length;i++) {
+			System.out.println("S-VM-" + solution.items[i].hashCode() + "\t->\tS-HOST-" + solution.items[i].getHostID());
+		}
+		 */
 	}
 
 	public static void clearStatics() { SimpleConsolidator.migrationCount = 0; }
@@ -117,13 +147,13 @@ public abstract class ModelBasedConsolidator extends Consolidator {
 	/**
 	 * The method to do the consolidation. It is individualized by each specific
 	 * consolidator.
-	 * 
+	 *
 	 */
 	protected abstract InfrastructureModel optimize(InfrastructureModel initial);
 
 	/**
 	 * Creates the actions-list with migration-/start- and shutdown-actions.
-	 * 
+	 *
 	 * @return The list with all the actions.
 	 */
 	private Action[] modelDiff(InfrastructureModel solution) {
@@ -156,7 +186,7 @@ public abstract class ModelBasedConsolidator extends Consolidator {
 
 	/**
 	 * Determines the dependencies between the actions.
-	 * 
+	 *
 	 * @param actions The action-list with all changes that have to be done inside
 	 *                the simulator.
 	 */
@@ -169,7 +199,7 @@ public abstract class ModelBasedConsolidator extends Consolidator {
 	/**
 	 * Checks if there are any predecessors of the actual action. If not, its
 	 * execute()-method is called.
-	 * 
+	 *
 	 * @param actions The action-list with all changes that have to be done inside
 	 *                the simulator.
 	 */
@@ -198,7 +228,7 @@ public abstract class ModelBasedConsolidator extends Consolidator {
 
 	/**
 	 * Getter for the upper Threshold of each PM.
-	 * 
+	 *
 	 * @return The upperThreshold.
 	 */
 	public double getUpperThreshold() {
@@ -207,7 +237,7 @@ public abstract class ModelBasedConsolidator extends Consolidator {
 
 	/**
 	 * Getter for the lower Threshold of each PM.
-	 * 
+	 *
 	 * @return The lowerThreshold.
 	 */
 	public double getLowerThreshold() {

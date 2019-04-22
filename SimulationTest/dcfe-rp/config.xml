@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<cloud id="test"	scheduler="hu.mta.sztaki.lpds.cloud.simulator.iaas.vmscheduling.RoundRobinScheduler" pmcontroller="hu.mta.sztaki.lpds.cloud.simulator.iaas.pmscheduling.AlwaysOnMachines">
+<cloud id="test"	scheduler="hu.mta.sztaki.lpds.cloud.simulator.iaas.vmscheduling.RoundRobinScheduler" pmcontroller="hu.mta.sztaki.lpds.cloud.simulator.iaas.pmscheduling.SchedulingDependentMachines">
 
 <machine id="testPM-0" cores="4" processing="0.001" memory="256000000000">
 <powerstates kind="host">

@@ -187,13 +187,10 @@ public class NerualNetworkConsolidator extends ModelBasedConsolidator {
     @Override
     public InfrastructureModel optimize(final InfrastructureModel sol) {
 
-        System.out.println("VMS AMOUNT -\t" + sol.items.length);
-        System.out.println("PMS AMOUNT -\t" + sol.bins.length);
-
-        //Selecting which
+        //Selecting what network
         Integer index = null;
 
-        switch (this.toConsolidate.listVMs().size()) {
+        switch (sol.items.length) {
             case 0:
                 //Do nothing
                 return sol;
@@ -231,7 +228,15 @@ public class NerualNetworkConsolidator extends ModelBasedConsolidator {
                 index = 10;
                 break;
             default:
-                break;
+                System.err.println("Too many VMs too Consolidate");
+                return sol;
+        }
+
+
+        if(sol.items.length==11){
+            System.err.println("VM amount -\t"+sol.items.length);
+        }else{
+            System.out.println("VM amount -\t"+sol.items.length);
         }
 
         // Standard deviation and means
@@ -240,7 +245,13 @@ public class NerualNetworkConsolidator extends ModelBasedConsolidator {
         StandardizeStrategy normalize = new StandardizeStrategy();
 
 
+        System.out.println("SOL\t"+sol.hashCode());
+
         for (int i = 0; i < sol.items.length; i++) {
+
+            // Before consolidation
+            //System.err.println("B-VM-"+sol.items[i].hashCode()+"\t->\tB-HOST-"+sol.items[i].getHostID());
+
             // Create INDArray of zeros
             INDArray data = Nd4j.zeros(nRows, nColumns.get(index));
 
@@ -268,12 +279,15 @@ public class NerualNetworkConsolidator extends ModelBasedConsolidator {
             // Index of the maximum value in the array (Classification)
             int idx = Nd4j.getExecutioner().execAndReturn(new IAMax(result)).getFinalResult();
 
-            // Migrate
+
             if (sol.items[i].getHostID() != idx) {
                 sol.items[i].migrate(sol.bins[idx]);
             }
-        }
 
+            // After consolidation
+            //System.out.println("A-VM-"+sol.items[i].hashCode()+"\t->\tA-HOST-"+sol.items[i].getHostID());
+
+        }
         return sol;
     }
 
