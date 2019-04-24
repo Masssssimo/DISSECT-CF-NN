@@ -85,31 +85,10 @@ public abstract class ModelBasedConsolidator extends Consolidator {
 			}
 		}
 
-		for(int i=0;i<pmList.length;i++) {
-			for(int j=0;j<pmList[i].numofCurrentVMs();j++){
-				System.out.println("\tVM-"+pmList[i].listVMs().toArray()[j].toString()+"\t Hosting PM-"+pmList[i].toString());
-			}
-		}
-
 		final InfrastructureModel input = new InfrastructureModel(pmList, lowerThreshold,
 				false, upperThreshold);
 		InfrastructureModel solution = optimize(input);
-		/*
-		System.err.println("INPUT\t"+input.hashCode());
-		System.out.println("Solution\t"+solution.hashCode());
 
-		 */
-
-		/* Before consolidation
-		for(int i=0;i<solution.items.length;i++) {
-			System.out.println("A-VM-" + solution.items[i].hashCode() + "\t->\tA-HOST-" + solution.items[i].getHostID());
-		}
-
-		// input consolidation
-		for(int i=0;i<solution.items.length;i++) {
-			System.err.println("I-VM-" + input.items[i].hashCode() + "\t->\tI-HOST-" + input.items[i].getHostID());
-		}
-		 */
 
 		if (solution.isBetterThan(input)) {
 			previousActions = modelDiff(solution);
@@ -118,11 +97,6 @@ public abstract class ModelBasedConsolidator extends Consolidator {
 			// printGraph(actions);
 			performActions();
 		}
-		/* After consolidation
-		for(int i=0;i<solution.items.length;i++) {
-			System.out.println("S-VM-" + solution.items[i].hashCode() + "\t->\tS-HOST-" + solution.items[i].getHostID());
-		}
-		 */
 	}
 
 	public static void clearStatics() { SimpleConsolidator.migrationCount = 0; }

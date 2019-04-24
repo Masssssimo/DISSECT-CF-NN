@@ -100,7 +100,7 @@ public class InfrastructureModel {
 	 * Auxiliary method. PRE: the maps #loads and #used are already filled POST:
 	 * fitness.nrActivePms and fitness.totalOverAllocated are correct
 	 */
-	protected void calculateFitness() {
+	public void calculateFitness() {
 		nrActivePms = 0;
 		totalOverAllocated = 0;
 		nrMigrations = 0;

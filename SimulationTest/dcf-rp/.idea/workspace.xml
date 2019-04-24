@@ -2,16 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bfb9fff-b3a4-413d-b8cb-8a2ea5bbf808" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../DistSysJavaHelpers/.idea/DistSysJavaHelpers.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../DistSysJavaHelpers/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../DistSysJavaHelpers/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/VirtualMachine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/VirtualMachine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/ModelBasedConsolidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/ModelBasedConsolidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/NerualNetworkConsolidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/NerualNetworkConsolidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dcfe-rp/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dcfe-rp/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/model/InfrastructureModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/model/InfrastructureModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dcfe-rp/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dcfe-rp/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dcfe-rp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dcfe-rp/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dcfe-rp/Synthetic.converted" beforeDir="false" afterPath="$PROJECT_DIR$/../dcfe-rp/Synthetic.converted" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dcfe-rp/Trace.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../dcfe-rp/Trace.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dcfe-rp/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dcfe-rp/config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TestCases/.~lock.Test-1.ods#" beforeDir="false" afterPath="$PROJECT_DIR$/../../TestCases/.~lock.Test-1.ods#" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../TestCases/JobDispatchDemo-Example.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../TestCases/JobDispatchDemo-Example.txt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,8 +29,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/NerualNetworkConsolidator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4465">
-              <caret line="247" column="49" selection-start-line="247" selection-start-column="49" selection-end-line="247" selection-end-column="49" />
+            <state relative-caret-position="4332">
+              <caret line="243" selection-start-line="243" selection-end-line="243" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -40,14 +41,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/ModelBasedConsolidator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="813">
-              <caret line="107" column="30" lean-forward="true" selection-start-line="107" selection-start-column="30" selection-end-line="107" selection-end-column="30" />
-              <folding>
-                <element signature="e#8430#8431#0" expanded="true" />
-                <element signature="e#8458#8459#0" expanded="true" />
-                <element signature="e#8589#8590#0" expanded="true" />
-                <element signature="e#8617#8618#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="513">
+              <caret line="80" column="61" selection-start-line="80" selection-start-column="61" selection-end-line="80" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -55,8 +50,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/model/InfrastructureModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+            <state relative-caret-position="1083">
+              <caret line="62" column="4" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="4" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -140,9 +135,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/IaaSService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/NerualNetworkConsolidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/VirtualMachine.java" />
         <option value="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/PhysicalMachine.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/model/InfrastructureModel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/NerualNetworkConsolidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/ModelBasedConsolidator.java" />
       </list>
     </option>
@@ -172,158 +168,7 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope">
-        <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
-          <expand>
-            <path>
-              <item name="dissect-cf" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="dcf-rp" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-            </path>
-            <path>
-              <item name="dissect-cf" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="dcf-rp" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="dissect-cf" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="dcf-rp" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="dissect-cf" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="dcf-rp" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="dissect-cf" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="dcf-rp" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="hu" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="dissect-cf" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="dcf-rp" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="hu" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="mta" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="dissect-cf" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="dcf-rp" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="hu" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="mta" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="sztaki" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="dissect-cf" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="dcf-rp" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="hu" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="mta" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="sztaki" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="lpds" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="dissect-cf" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="dcf-rp" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="hu" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="mta" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="sztaki" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="lpds" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="cloud" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="dissect-cf" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="dcf-rp" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="hu" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="mta" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="sztaki" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="lpds" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="cloud" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="simulator" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="dissect-cf" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="dcf-rp" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="hu" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="mta" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="sztaki" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="lpds" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="cloud" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="simulator" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="iaas" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="dissect-cf" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="dcf-rp" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="hu" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="mta" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="sztaki" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="lpds" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="cloud" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="simulator" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="iaas" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="consolidation" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="dissect-cf" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="dcf-rp" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="hu" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="mta" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="sztaki" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="lpds" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="cloud" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="simulator" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="iaas" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="vmconsolidation" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="dissect-cf" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="dcf-rp" type="2674bda8:ScopeViewTreeModel$GroupNode" />
-              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="hu" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="mta" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="sztaki" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="lpds" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="cloud" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="simulator" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="iaas" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="vmconsolidation" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="NN" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
+      <pane id="Scope" />
       <pane id="ProjectPane" />
     </panes>
   </component>
@@ -380,7 +225,7 @@
   <component name="ToolWindowManager">
     <frame x="71" y="25" width="1849" height="1055" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.10482529" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2401553" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -389,7 +234,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.032397408" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.087473005" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -511,8 +356,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/NerualNetworkConsolidator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4465">
-          <caret line="247" column="49" selection-start-line="247" selection-start-column="49" selection-end-line="247" selection-end-column="49" />
+        <state relative-caret-position="4332">
+          <caret line="243" selection-start-line="243" selection-end-line="243" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -521,8 +366,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/model/InfrastructureModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="13" column="13" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        <state relative-caret-position="1083">
+          <caret line="62" column="4" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -580,14 +425,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/ModelBasedConsolidator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="813">
-          <caret line="107" column="30" lean-forward="true" selection-start-line="107" selection-start-column="30" selection-end-line="107" selection-end-column="30" />
-          <folding>
-            <element signature="e#8430#8431#0" expanded="true" />
-            <element signature="e#8458#8459#0" expanded="true" />
-            <element signature="e#8589#8590#0" expanded="true" />
-            <element signature="e#8617#8618#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="513">
+          <caret line="80" column="61" selection-start-line="80" selection-start-column="61" selection-end-line="80" selection-end-column="61" />
         </state>
       </provider>
     </entry>

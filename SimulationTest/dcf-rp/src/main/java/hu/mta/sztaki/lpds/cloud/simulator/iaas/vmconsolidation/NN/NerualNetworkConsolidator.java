@@ -2,7 +2,10 @@ package hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.NN;
 
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.IaaSService;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.ModelBasedConsolidator;
+import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.model.GenHelper;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.model.InfrastructureModel;
+import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.model.PreserveAllocations;
+import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.model.improver.NonImprover;
 import org.deeplearning4j.nn.multilayer.MultiLayerNetwork;
 import org.deeplearning4j.util.ModelSerializer;
 import org.nd4j.linalg.api.ndarray.INDArray;
@@ -185,8 +188,8 @@ public class NerualNetworkConsolidator extends ModelBasedConsolidator {
     }
 
     @Override
-    public InfrastructureModel optimize(final InfrastructureModel sol) {
-
+    public InfrastructureModel optimize(final InfrastructureModel input) {
+        InfrastructureModel sol=new InfrastructureModel(input, PreserveAllocations.singleton, NonImprover.singleton);
         //Selecting what network
         Integer index = null;
 
@@ -239,13 +242,15 @@ public class NerualNetworkConsolidator extends ModelBasedConsolidator {
             System.out.println("VM amount -\t"+sol.items.length);
         }
 
+
+
         // Standard deviation and means
         DistributionStats DisStat = new DistributionStats(mean.get(index), std.get(index));
         // Set up normalization
         StandardizeStrategy normalize = new StandardizeStrategy();
 
 
-        System.out.println("SOL\t"+sol.hashCode());
+        //System.out.println("SOL\t"+sol.bins);
 
         for (int i = 0; i < sol.items.length; i++) {
 
@@ -288,6 +293,7 @@ public class NerualNetworkConsolidator extends ModelBasedConsolidator {
             //System.out.println("A-VM-"+sol.items[i].hashCode()+"\t->\tA-HOST-"+sol.items[i].getHostID());
 
         }
+        sol.calculateFitness();
         return sol;
     }
 
