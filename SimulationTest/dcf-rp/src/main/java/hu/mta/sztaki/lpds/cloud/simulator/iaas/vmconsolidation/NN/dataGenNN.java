@@ -3,6 +3,7 @@ package hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.NN;
 import hu.mta.sztaki.lpds.cloud.simulator.Timed;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.IaaSService;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.PhysicalMachine;
+import hu.mta.sztaki.lpds.cloud.simulator.iaas.VirtualMachine;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.constraints.ConstantConstraints;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.model.GenHelper;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.model.InfrastructureModel;
@@ -27,21 +28,31 @@ public class dataGenNN {
     private static ArrayList<InfrastructureModel> optIM = new ArrayList<>();
 
     //Amount of VM's & PM's
-    private static int amountVM = 11;
+    private static int amountVM = 76;
     private static int amountPM = 4;
 
     public static void main(String args[]) throws Exception{
 
+        /**
+         *  Cloud with only 4 Physical Machine
+        */
+        //File xml = new File("/home/mike/DISSECT-CF-NN/dcf-rp/config.xml");
 
-        File xml = new File("/home/mike/DISSECT-CF-NN/dcf-rp/config.xml");
+        File xml = new File("/home/mike/SimulationMLP/SimulationTest/dcf-rp/config-16.xml");
         IaaSService cloud = CloudLoader.loadNodes(xml.toString());
         Timed.simulateUntilLastEvent();
         VirtualAppliance va = new VirtualAppliance("BASE-VA", 1000, 0, false, 10000l);
         cloud.repositories.get(0).registerObject(va);
-        ConstantConstraints minCaps = new ConstantConstraints(0.13, 0.001, true, 99999999L);
+        ConstantConstraints minCaps = new ConstantConstraints(0.1, 0.001, true, 99999999L);
         cloud.requestVM(va, minCaps, cloud.repositories.get(0), amountVM);
         Timed.simulateUntilLastEvent();
 
+        System.out.println(cloud.listVMs().size());
+
+        /**
+         *  Executing Neural Network Consolidation with 4 PM's
+         */
+        /*
         IM = new InfrastructureModel(cloud.machines.toArray(new PhysicalMachine[0]), 1, false, 1);
 
         // Before consolidation
@@ -56,9 +67,15 @@ public class dataGenNN {
         for(int i=0;i<IM.items.length;i++){
             System.out.println("VM-"+IM.items[i].hashCode()+"\t->\t HOST-"+IM.items[i].getHostID());
         }
+        */
+
+
+        /**
+         *  Execute Generating Datasets
+         */
 
         /*
-       permuteManual(amountVM,amountPM);
+        permuteManual(amountVM,amountPM);
 
         for(int i=0;i<199111;i++){
             generate();
@@ -67,6 +84,7 @@ public class dataGenNN {
             optIM.clear();
         }
         */
+
 
     }
 

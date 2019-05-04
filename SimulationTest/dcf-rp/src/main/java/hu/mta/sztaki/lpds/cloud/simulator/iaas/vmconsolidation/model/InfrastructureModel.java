@@ -3,6 +3,7 @@ package hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import hu.mta.sztaki.lpds.cloud.simulator.iaas.IaaSService;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.PhysicalMachine;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.VirtualMachine;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.constraints.ResourceConstraints;
@@ -175,4 +176,16 @@ public class InfrastructureModel {
 
 		return result.toString();
 	}
+
+	/**
+	 * Splitting the infrastructure model for the NeuralNetworkConsolidator to perform distributed consolidation
+	 */
+
+	public ArrayList<InfrastructureModel> splitIMs = new ArrayList<>();
+
+	public static void splitIM(IaaSService toConsolidate){
+
+	}
+
+
 }

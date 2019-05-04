@@ -1,93 +1,108 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<cloud id="test"	scheduler="hu.mta.sztaki.lpds.cloud.simulator.iaas.vmscheduling.RoundRobinScheduler" pmcontroller="hu.mta.sztaki.lpds.cloud.simulator.iaas.pmscheduling.AlwaysOnMachines">
+<cloud id="test"	scheduler="hu.mta.sztaki.lpds.cloud.simulator.iaas.vmscheduling.RoundRobinScheduler" pmcontroller="hu.mta.sztaki.lpds.cloud.simulator.iaas.pmscheduling.SchedulingDependentMachines">
 
-<machine id="testPM-0" cores="4" processing="0.001" memory="256000000000">
-<powerstates kind="host">
-<power	model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.LinearConsumptionModel" idle="296" max="493" inState="default" />
-<power	model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.ConstantConsumptionModel" idle="20" max="20" inState="OFF" />
-</powerstates>
-<statedelays startup="89000" shutdown="29000" />
-<repository id="disk" capacity="5000000000000" inBW="250000" outBW="250000" diskBW="50000">
-<powerstates kind="storage">
-<power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.LinearConsumptionModel" idle="6.5" max="9" inState="default" />
-<power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.ConstantConsumptionModel" idle="0" max="0" inState="OFF" />
-</powerstates>
-<powerstates kind="network">
-<power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.LinearConsumptionModel" idle="3.4" max="3.8" inState="default" />
-<power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.ConstantConsumptionModel" idle="0" max="0" inState="OFF" />
-</powerstates>
-<latency towards="testPM-1" value="5" />
-</repository>
-</machine>
+    <machine id="testPM-0" cores="4" processing="0.001" memory="256000000000">
+        <powerstates kind="host">
+            <power	model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.LinearConsumptionModel" idle="296" max="493" inState="default" />
+            <power	model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.ConstantConsumptionModel" idle="20" max="20" inState="OFF" />
+        </powerstates>
+        <statedelays startup="89000" shutdown="29000" />
+        <repository id="machine-0" capacity="5000000000000" inBW="250000" outBW="250000" diskBW="50000">
+            <powerstates kind="storage">
+                <power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.LinearConsumptionModel" idle="6.5" max="9" inState="default" />
+                <power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.ConstantConsumptionModel" idle="0" max="0" inState="OFF" />
+            </powerstates>
+            <powerstates kind="network">
+                <power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.LinearConsumptionModel" idle="3.4" max="3.8" inState="default" />
+                <power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.ConstantConsumptionModel" idle="0" max="0" inState="OFF" />
+            </powerstates>
+            <latency towards="machine-1" value="5" />
+            <latency towards="machine-2" value="5" />
+            <latency towards="machine-3" value="5" />
+            <latency towards="repo" value="5" />
+        </repository>
+    </machine>
 
-<machine id="testPM-1" cores="4" processing="0.001" memory="256000000000">
-<powerstates kind="host">
-<power	model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.LinearConsumptionModel" idle="296" max="493" inState="default" />
-<power	model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.ConstantConsumptionModel" idle="20" max="20" inState="OFF" />
-</powerstates>
-<statedelays startup="89000" shutdown="29000" />
-<repository id="disk" capacity="5000000000000" inBW="250000" outBW="250000" diskBW="50000">
-<powerstates kind="storage">
-<power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.LinearConsumptionModel" idle="6.5" max="9" inState="default" />
-<power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.ConstantConsumptionModel" idle="0" max="0" inState="OFF" />
-</powerstates>
-<powerstates kind="network">
-<power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.LinearConsumptionModel" idle="3.4" max="3.8" inState="default" />
-<power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.ConstantConsumptionModel" idle="0" max="0" inState="OFF" />
-</powerstates>
-<latency towards="testPM-2" value="5" />
-</repository>
-</machine>
+    <machine id="testPM-1" cores="4" processing="0.001" memory="256000000000">
+        <powerstates kind="host">
+            <power	model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.LinearConsumptionModel" idle="296" max="493" inState="default" />
+            <power	model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.ConstantConsumptionModel" idle="20" max="20" inState="OFF" />
+        </powerstates>
+        <statedelays startup="89000" shutdown="29000" />
+        <repository id="machine-1" capacity="5000000000000" inBW="250000" outBW="250000" diskBW="50000">
+            <powerstates kind="storage">
+                <power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.LinearConsumptionModel" idle="6.5" max="9" inState="default" />
+                <power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.ConstantConsumptionModel" idle="0" max="0" inState="OFF" />
+            </powerstates>
+            <powerstates kind="network">
+                <power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.LinearConsumptionModel" idle="3.4" max="3.8" inState="default" />
+                <power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.ConstantConsumptionModel" idle="0" max="0" inState="OFF" />
+            </powerstates>
+            <latency towards="machine-0" value="5" />
+            <latency towards="machine-2" value="5" />
+            <latency towards="machine-3" value="5" />
+            <latency towards="repo" value="5" />
+        </repository>
+    </machine>
 
-<machine id="testPM-2" cores="4" processing="0.001" memory="256000000000">
-<powerstates kind="host">
-<power	model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.LinearConsumptionModel" idle="296" max="493" inState="default" />
-<power	model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.ConstantConsumptionModel" idle="20" max="20" inState="OFF" />
-</powerstates>
-<statedelays startup="89000" shutdown="29000" />
-<repository id="disk" capacity="5000000000000" inBW="250000" outBW="250000" diskBW="50000">
-<powerstates kind="storage">
-<power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.LinearConsumptionModel" idle="6.5" max="9" inState="default" />
-<power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.ConstantConsumptionModel" idle="0" max="0" inState="OFF" />
-</powerstates>
-<powerstates kind="network">
-<power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.LinearConsumptionModel" idle="3.4" max="3.8" inState="default" />
-<power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.ConstantConsumptionModel" idle="0" max="0" inState="OFF" />
-</powerstates>
-<latency towards="testPM-3" value="5" />
-</repository>
-</machine>
+    <machine id="testPM-2" cores="4" processing="0.001" memory="256000000000">
+        <powerstates kind="host">
+            <power	model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.LinearConsumptionModel" idle="296" max="493" inState="default" />
+            <power	model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.ConstantConsumptionModel" idle="20" max="20" inState="OFF" />
+        </powerstates>
+        <statedelays startup="89000" shutdown="29000" />
+        <repository id="machine-2" capacity="5000000000000" inBW="250000" outBW="250000" diskBW="50000">
+            <powerstates kind="storage">
+                <power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.LinearConsumptionModel" idle="6.5" max="9" inState="default" />
+                <power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.ConstantConsumptionModel" idle="0" max="0" inState="OFF" />
+            </powerstates>
+            <powerstates kind="network">
+                <power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.LinearConsumptionModel" idle="3.4" max="3.8" inState="default" />
+                <power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.ConstantConsumptionModel" idle="0" max="0" inState="OFF" />
+            </powerstates>
+            <latency towards="machine-0" value="5" />
+            <latency towards="machine-1" value="5" />
+            <latency towards="machine-3" value="5" />
+            <latency towards="repo" value="5" />
+        </repository>
+    </machine>
 
-<machine id="testPM-3" cores="4" processing="0.001" memory="256000000000">
-<powerstates kind="host">
-<power	model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.LinearConsumptionModel" idle="296" max="493" inState="default" />
-<power	model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.ConstantConsumptionModel" idle="20" max="20" inState="OFF" />
-</powerstates>
-<statedelays startup="89000" shutdown="29000" />
-<repository id="disk" capacity="5000000000000" inBW="250000" outBW="250000" diskBW="50000">
-<powerstates kind="storage">
-<power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.LinearConsumptionModel" idle="6.5" max="9" inState="default" />
-<power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.ConstantConsumptionModel" idle="0" max="0" inState="OFF" />
-</powerstates>
-<powerstates kind="network">
-<power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.LinearConsumptionModel" idle="3.4" max="3.8" inState="default" />
-<power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.ConstantConsumptionModel" idle="0" max="0" inState="OFF" />
-</powerstates>
-<latency towards="repo" value="5" />
-</repository>
-</machine>
+    <machine id="testPM-3" cores="4" processing="0.001" memory="256000000000">
+        <powerstates kind="host">
+            <power	model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.LinearConsumptionModel" idle="296" max="493" inState="default" />
+            <power	model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.ConstantConsumptionModel" idle="20" max="20" inState="OFF" />
+        </powerstates>
+        <statedelays startup="89000" shutdown="29000" />
+        <repository id="machine-3" capacity="5000000000000" inBW="250000" outBW="250000" diskBW="50000">
+            <powerstates kind="storage">
+                <power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.LinearConsumptionModel" idle="6.5" max="9" inState="default" />
+                <power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.ConstantConsumptionModel" idle="0" max="0" inState="OFF" />
+            </powerstates>
+            <powerstates kind="network">
+                <power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.LinearConsumptionModel" idle="3.4" max="3.8" inState="default" />
+                <power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.ConstantConsumptionModel" idle="0" max="0" inState="OFF" />
+            </powerstates>
+            <latency towards="machine-0" value="5" />
+            <latency towards="machine-1" value="5" />
+            <latency towards="machine-2" value="5" />
+            <latency towards="repo" value="5" />
+        </repository>
+    </machine>
 
 
-<repository id="repo" capacity="38000000000000" inBW="250000" outBW="250000" diskBW="100000">
-<powerstates kind="storage">
-<power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.LinearConsumptionModel" idle="65" max="90" inState="default" /> 
-<power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.ConstantConsumptionModel" idle="0" max="0" inState="OFF" />
-</powerstates>
-<powerstates kind="network">
-<power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.LinearConsumptionModel" idle="3.4" max="3.8" inState="default" />
-<power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.ConstantConsumptionModel" idle="0" max="0" inState="OFF" />
-</powerstates>
-<latency towards="disk" value="5" />
-</repository>
+    <repository id="repo" capacity="38000000000000" inBW="250000" outBW="250000" diskBW="100000">
+        <powerstates kind="storage">
+            <power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.LinearConsumptionModel" idle="65" max="90" inState="default" />
+            <power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.ConstantConsumptionModel" idle="0" max="0" inState="OFF" />
+        </powerstates>
+        <powerstates kind="network">
+            <power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.LinearConsumptionModel" idle="3.4" max="3.8" inState="default" />
+            <power model="hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.ConstantConsumptionModel" idle="0" max="0" inState="OFF" />
+        </powerstates>
+        <latency towards="machine-0" value="5" />
+        <latency towards="machine-1" value="5" />
+        <latency towards="machine-2" value="5" />
+        <latency towards="machine-3" value="5" />
+    </repository>
 </cloud>
