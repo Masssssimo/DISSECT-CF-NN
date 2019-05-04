@@ -28,7 +28,7 @@ public class dataGenNN {
     private static ArrayList<InfrastructureModel> optIM = new ArrayList<>();
 
     //Amount of VM's & PM's
-    private static int amountVM = 76;
+    private static int amountVM = 32;
     private static int amountPM = 4;
 
     public static void main(String args[]) throws Exception{
@@ -43,11 +43,13 @@ public class dataGenNN {
         Timed.simulateUntilLastEvent();
         VirtualAppliance va = new VirtualAppliance("BASE-VA", 1000, 0, false, 10000l);
         cloud.repositories.get(0).registerObject(va);
-        ConstantConstraints minCaps = new ConstantConstraints(0.1, 0.001, true, 99999999L);
+        ConstantConstraints minCaps = new ConstantConstraints(2, 0.001, true, 99999999L);
         cloud.requestVM(va, minCaps, cloud.repositories.get(0), amountVM);
         Timed.simulateUntilLastEvent();
 
-        System.out.println(cloud.listVMs().size());
+
+        IM = new InfrastructureModel(cloud.machines.toArray(new PhysicalMachine[0]), 1, false, 1);
+        IM.splitBefore(cloud);
 
         /**
          *  Executing Neural Network Consolidation with 4 PM's

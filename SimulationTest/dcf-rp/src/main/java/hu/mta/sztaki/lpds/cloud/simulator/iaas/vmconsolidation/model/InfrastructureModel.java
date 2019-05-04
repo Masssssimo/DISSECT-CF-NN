@@ -7,6 +7,7 @@ import hu.mta.sztaki.lpds.cloud.simulator.iaas.IaaSService;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.PhysicalMachine;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.VirtualMachine;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.constraints.ResourceConstraints;
+import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.NN.NerualNetworkConsolidator;
 
 /**
  * Represents a possible solution of the VM consolidation problem, i.e., a
@@ -178,14 +179,37 @@ public class InfrastructureModel {
 	}
 
 	/**
-	 * Splitting the infrastructure model for the NeuralNetworkConsolidator to perform distributed consolidation
+	 * Splitting the infrastructure model for the NeuralNetworkConsolidator to execute distributed consolidation
 	 */
 
-	public ArrayList<InfrastructureModel> splitIMs = new ArrayList<>();
+	public static ArrayList<InfrastructureModel> splitIMs = new ArrayList<>();
 
-	public static void splitIM(IaaSService toConsolidate){
-
+	public static void splitBefore(IaaSService toConsolidate){
+		for(int i=0;i<toConsolidate.machines.size();i+=4){
+			PhysicalMachine[] splitPMs = {toConsolidate.machines.get(i),toConsolidate.machines.get(i+1),toConsolidate.machines.get(i+2),toConsolidate.machines.get(i+3)};
+			InfrastructureModel x = new InfrastructureModel(splitPMs, 1, false, 1);
+			splitIMs.add(x);
+		}
+		//Execute consolidation
+		consolidateSplit(toConsolidate);
 	}
 
+	/**
+	 * Consolidate the split infrastructure models via NeuralNetworkConsolidator
+	 */
+	public static void consolidateSplit(IaaSService toConsolidate){
+		for(InfrastructureModel x: splitIMs){
+			NerualNetworkConsolidator consolidate = new NerualNetworkConsolidator(toConsolidate,0);
+			consolidate.optimize(x);
+		}
+		mergeIMs(toConsolidate);
+	}
 
+	/**
+	 * Merge the split infrastructure models back
+	 */
+	public static void mergeIMs(IaaSService toConsolidate){
+		
+
+	}
 }

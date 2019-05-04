@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bfb9fff-b3a4-413d-b8cb-8a2ea5bbf808" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config-16.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/NerualNetworkConsolidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/NerualNetworkConsolidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/dataGenNN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/dataGenNN.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/model/InfrastructureModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/model/InfrastructureModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dcfe-rp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dcfe-rp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dcfe-rp/Trace.csv" beforeDir="false" afterPath="$PROJECT_DIR$/../dcfe-rp/Trace.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../TestCases/.~lock.Test-1.ods#" beforeDir="false" afterPath="$PROJECT_DIR$/../../TestCases/.~lock.Test-1.ods#" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../TestCases/.~lock.TestCase1info.odt#" beforeDir="false" afterPath="$PROJECT_DIR$/../../TestCases/.~lock.TestCase1info.odt#" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../TestCases/Test-1.ods" beforeDir="false" afterPath="$PROJECT_DIR$/../../TestCases/Test-1.ods" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../TestCases/TestCase1info.odt" beforeDir="false" afterPath="$PROJECT_DIR$/../../TestCases/TestCase1info.odt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,10 +19,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/model/InfrastructureModel.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/NerualNetworkConsolidator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="836">
-              <caret line="183" column="49" selection-start-line="183" selection-start-column="49" selection-end-line="183" selection-end-column="49" />
+            <state relative-caret-position="-661">
+              <caret line="237" column="71" selection-start-line="237" selection-start-column="71" selection-end-line="237" selection-end-column="71" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -40,10 +31,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/model/InfrastructureModel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="211" column="8" selection-start-line="211" selection-start-column="8" selection-end-line="211" selection-end-column="8" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/dataGenNN.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="487">
-              <caret line="48" column="46" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
+            <state relative-caret-position="-3202">
+              <caret line="52" selection-start-line="52" selection-end-line="52" />
               <folding>
                 <element signature="e#5696#5697#0" expanded="true" />
                 <element signature="e#5739#5740#0" expanded="true" />
@@ -53,10 +56,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config-16.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/IaaSService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1115">
-              <caret line="657" column="8" lean-forward="true" selection-start-line="657" selection-start-column="8" selection-end-line="657" selection-end-column="8" />
+            <state relative-caret-position="665">
+              <caret line="58" column="42" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -67,6 +73,7 @@
     <findStrings>
       <find>toStr</find>
       <find>toS</find>
+      <find>Iaas</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -78,12 +85,12 @@
         <option value="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/IaaSService.java" />
         <option value="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/VirtualMachine.java" />
         <option value="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/PhysicalMachine.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/NerualNetworkConsolidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/ModelBasedConsolidator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/model/InfrastructureModel.java" />
         <option value="$PROJECT_DIR$/config.xml" />
         <option value="$PROJECT_DIR$/config-16.xml" />
         <option value="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/dataGenNN.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/NerualNetworkConsolidator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/model/InfrastructureModel.java" />
       </list>
     </option>
   </component>
@@ -214,6 +221,37 @@
               <item name="simulator" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="iaas" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
+            <path>
+              <item name="dissect-cf" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="dcf-rp" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="hu" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="mta" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="sztaki" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="lpds" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="cloud" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="simulator" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="iaas" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="vmconsolidation" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="dissect-cf" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="dcf-rp" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="hu" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="mta" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="sztaki" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="lpds" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="cloud" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="simulator" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="iaas" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="vmconsolidation" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="NN" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -281,7 +319,7 @@
     <frame x="71" y="25" width="1849" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2717693" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2717693" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -290,7 +328,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.032397408" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.22138229" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -424,16 +462,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/IaaSService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="58" column="42" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/constraints/ResourceConstraints.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
@@ -459,16 +487,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/NerualNetworkConsolidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="32" column="68" selection-start-line="32" selection-start-column="43" selection-end-line="32" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/ModelBasedConsolidator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
@@ -483,10 +501,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/model/InfrastructureModel.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/IaaSService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="183" column="49" selection-start-line="183" selection-start-column="49" selection-end-line="183" selection-end-column="49" />
+        <state relative-caret-position="665">
+          <caret line="58" column="42" selection-start-line="58" selection-start-column="42" selection-end-line="58" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/NerualNetworkConsolidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-661">
+          <caret line="237" column="71" selection-start-line="237" selection-start-column="71" selection-end-line="237" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -495,11 +523,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/dataGenNN.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="48" column="46" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
+        <state relative-caret-position="-3202">
+          <caret line="52" selection-start-line="52" selection-end-line="52" />
           <folding>
             <element signature="e#5696#5697#0" expanded="true" />
             <element signature="e#5739#5740#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/model/InfrastructureModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="211" column="8" selection-start-line="211" selection-start-column="8" selection-end-line="211" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

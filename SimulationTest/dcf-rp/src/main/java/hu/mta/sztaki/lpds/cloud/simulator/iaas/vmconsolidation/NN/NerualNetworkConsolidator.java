@@ -235,13 +235,13 @@ public class NerualNetworkConsolidator extends ModelBasedConsolidator {
                 return sol;
         }
 
-
+        /* Check how many virtual machine instances for JobDispatchDemo
         if(sol.items.length==11){
             System.err.println("VM amount -\t"+sol.items.length);
         }else{
             System.out.println("VM amount -\t"+sol.items.length);
         }
-
+        */
 
 
         // Standard deviation and means
