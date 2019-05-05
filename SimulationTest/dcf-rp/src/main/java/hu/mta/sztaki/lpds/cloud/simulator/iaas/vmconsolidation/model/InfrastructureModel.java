@@ -186,20 +186,20 @@ public class InfrastructureModel {
 	public static ArrayList<InfrastructureModel> splitIMs = new ArrayList<>();
 	public static ArrayList<InfrastructureModel> consolidatedIMs = new ArrayList<>();
 
-	public  void splitBefore(IaaSService toConsolidate){
+	public  InfrastructureModel splitBefore(IaaSService toConsolidate){
 		for(int i=0;i<toConsolidate.machines.size();i+=4){
 			PhysicalMachine[] splitPMs = {toConsolidate.machines.get(i),toConsolidate.machines.get(i+1),toConsolidate.machines.get(i+2),toConsolidate.machines.get(i+3)};
 			InfrastructureModel x = new InfrastructureModel(splitPMs, 1, false, 1);
 			splitIMs.add(x);
 			}
 		//Execute consolidation
-		consolidateSplit(toConsolidate);
+		return consolidateSplit(toConsolidate);
 	}
 
 	/**
 	 * Consolidate the split infrastructure models via NeuralNetworkConsolidator
 	 */
-	public  void consolidateSplit(IaaSService toConsolidate){
+	public  InfrastructureModel consolidateSplit(IaaSService toConsolidate){
 		//Checking mapping before consolidation
 		/*
 		for(int j=0;j<splitIMs.size();j++){
@@ -217,7 +217,7 @@ public class InfrastructureModel {
 			NerualNetworkConsolidator consolidate = new NerualNetworkConsolidator(toConsolidate,0);
 			consolidatedIMs.add(consolidate.optimize(splitIMs.get(i)));
 		}
-		mergeIMs(toConsolidate);
+		return mergeIMs(toConsolidate);
 	}
 
 	/**

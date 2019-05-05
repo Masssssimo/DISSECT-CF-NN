@@ -49,7 +49,7 @@ public class dataGenNN {
 
 
         IM = new InfrastructureModel(cloud.machines.toArray(new PhysicalMachine[0]), 1, false, 1);
-        IM.splitBefore(cloud);
+        IM = IM.splitBefore(cloud);
 
         /**
          *  Executing Neural Network Consolidation with 4 PM's
