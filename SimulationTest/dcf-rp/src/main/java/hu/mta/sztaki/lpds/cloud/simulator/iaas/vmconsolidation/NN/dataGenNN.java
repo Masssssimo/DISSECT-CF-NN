@@ -3,10 +3,10 @@ package hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.NN;
 import hu.mta.sztaki.lpds.cloud.simulator.Timed;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.IaaSService;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.PhysicalMachine;
-import hu.mta.sztaki.lpds.cloud.simulator.iaas.VirtualMachine;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.constraints.ConstantConstraints;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.model.GenHelper;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.model.InfrastructureModel;
+import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.model.PreserveAllocations;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.model.improver.NonImprover;
 import hu.mta.sztaki.lpds.cloud.simulator.io.VirtualAppliance;
 import hu.mta.sztaki.lpds.cloud.simulator.util.CloudLoader;
@@ -47,9 +47,10 @@ public class dataGenNN {
         cloud.requestVM(va, minCaps, cloud.repositories.get(0), amountVM);
         Timed.simulateUntilLastEvent();
 
-
+        //Create Infrastructure Model
         IM = new InfrastructureModel(cloud.machines.toArray(new PhysicalMachine[0]), 1, false, 1);
-        IM = IM.splitBefore(cloud);
+        //Execute optimization
+        IM = SplitMerge.splitBefore(cloud);
 
         /**
          *  Executing Neural Network Consolidation with 4 PM's
