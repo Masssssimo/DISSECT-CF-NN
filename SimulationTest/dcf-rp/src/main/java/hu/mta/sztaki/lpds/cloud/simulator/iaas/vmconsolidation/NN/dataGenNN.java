@@ -28,7 +28,7 @@ public class dataGenNN {
     private static ArrayList<InfrastructureModel> optIM = new ArrayList<>();
 
     //Amount of VM's & PM's
-    private static int amountVM = 32;
+    private static int amountVM = 30;
     private static int amountPM = 4;
 
     public static void main(String args[]) throws Exception{
@@ -43,7 +43,7 @@ public class dataGenNN {
         Timed.simulateUntilLastEvent();
         VirtualAppliance va = new VirtualAppliance("BASE-VA", 1000, 0, false, 10000l);
         cloud.repositories.get(0).registerObject(va);
-        ConstantConstraints minCaps = new ConstantConstraints(2, 0.001, true, 99999999L);
+        ConstantConstraints minCaps = new ConstantConstraints(1.5, 0.001, true, 9999999999L);
         cloud.requestVM(va, minCaps, cloud.repositories.get(0), amountVM);
         Timed.simulateUntilLastEvent();
 
@@ -63,7 +63,7 @@ public class dataGenNN {
         }
 
         NerualNetworkConsolidator consolidate = new NerualNetworkConsolidator(cloud,0);
-        consolidate.optimize(IM);
+        IM = consolidate.optimize(IM);
 
         // After consolidation
         for(int i=0;i<IM.items.length;i++){

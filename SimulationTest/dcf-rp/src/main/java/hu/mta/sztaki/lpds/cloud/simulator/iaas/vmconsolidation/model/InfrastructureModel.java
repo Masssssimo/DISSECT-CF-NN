@@ -8,6 +8,7 @@ import hu.mta.sztaki.lpds.cloud.simulator.iaas.PhysicalMachine;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.VirtualMachine;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.constraints.ResourceConstraints;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.NN.NerualNetworkConsolidator;
+import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.model.improver.NonImprover;
 
 /**
  * Represents a possible solution of the VM consolidation problem, i.e., a
@@ -183,13 +184,14 @@ public class InfrastructureModel {
 	 */
 
 	public static ArrayList<InfrastructureModel> splitIMs = new ArrayList<>();
+	public static ArrayList<InfrastructureModel> consolidatedIMs = new ArrayList<>();
 
 	public static void splitBefore(IaaSService toConsolidate){
 		for(int i=0;i<toConsolidate.machines.size();i+=4){
 			PhysicalMachine[] splitPMs = {toConsolidate.machines.get(i),toConsolidate.machines.get(i+1),toConsolidate.machines.get(i+2),toConsolidate.machines.get(i+3)};
 			InfrastructureModel x = new InfrastructureModel(splitPMs, 1, false, 1);
 			splitIMs.add(x);
-		}
+			}
 		//Execute consolidation
 		consolidateSplit(toConsolidate);
 	}
@@ -198,9 +200,17 @@ public class InfrastructureModel {
 	 * Consolidate the split infrastructure models via NeuralNetworkConsolidator
 	 */
 	public static void consolidateSplit(IaaSService toConsolidate){
-		for(InfrastructureModel x: splitIMs){
+
+		for(int j=0;j<splitIMs.size();j++){
+			for(int i=0;i<splitIMs.get(j).bins.length;i++){
+				for(int k=0;k<splitIMs.get(j).bins[i].getVMs().size();k++){
+					System.out.println("IM-"+i+"\t->\t PM-"+splitIMs.get(j).bins[i].hashCode()+"\t->\t VMs-"+splitIMs.get(j).bins[i].getVMs().get(k).hashCode());
+				}
+			}
+		}
+		for(int i=0;i<splitIMs.size();i++){
 			NerualNetworkConsolidator consolidate = new NerualNetworkConsolidator(toConsolidate,0);
-			consolidate.optimize(x);
+			consolidatedIMs.add(consolidate.optimize(splitIMs.get(i)));
 		}
 		mergeIMs(toConsolidate);
 	}
@@ -209,7 +219,18 @@ public class InfrastructureModel {
 	 * Merge the split infrastructure models back
 	 */
 	public static void mergeIMs(IaaSService toConsolidate){
-		
+		//Get consolidated pms
+		ArrayList<ModelPM> list = new ArrayList<>();
+		for(int i=0;i<consolidatedIMs.size();i++){
+			for(int j=0;j<consolidatedIMs.get(i).bins.length;j++){
+				//list.add(splitIMs.get(i).bins[i]);
+				//System.out.println("PM-"+splitIMs.get(i).bins[j].hashCode()+"\t->\t VMs-"+splitIMs.get(i).bins[j].getVMs().size());
+				for(int k=0;k<consolidatedIMs.get(i).bins[j].getVMs().size();k++){
+					System.out.println("IM-"+i+"\t->\t PM-"+consolidatedIMs.get(i).bins[j].hashCode()+"\t->\t VMs-"+consolidatedIMs.get(i).bins[j].getVMs().get(k).hashCode());
+				}
 
+			}
+		}
+		list.toArray();
 	}
 }
