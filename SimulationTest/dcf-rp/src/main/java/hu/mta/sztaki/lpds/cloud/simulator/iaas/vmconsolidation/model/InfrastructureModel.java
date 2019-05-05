@@ -186,7 +186,7 @@ public class InfrastructureModel {
 	public static ArrayList<InfrastructureModel> splitIMs = new ArrayList<>();
 	public static ArrayList<InfrastructureModel> consolidatedIMs = new ArrayList<>();
 
-	public static void splitBefore(IaaSService toConsolidate){
+	public  void splitBefore(IaaSService toConsolidate){
 		for(int i=0;i<toConsolidate.machines.size();i+=4){
 			PhysicalMachine[] splitPMs = {toConsolidate.machines.get(i),toConsolidate.machines.get(i+1),toConsolidate.machines.get(i+2),toConsolidate.machines.get(i+3)};
 			InfrastructureModel x = new InfrastructureModel(splitPMs, 1, false, 1);
@@ -199,8 +199,9 @@ public class InfrastructureModel {
 	/**
 	 * Consolidate the split infrastructure models via NeuralNetworkConsolidator
 	 */
-	public static void consolidateSplit(IaaSService toConsolidate){
-
+	public  void consolidateSplit(IaaSService toConsolidate){
+		//Checking mapping before consolidation
+		/*
 		for(int j=0;j<splitIMs.size();j++){
 			for(int i=0;i<splitIMs.get(j).bins.length;i++){
 				for(int k=0;k<splitIMs.get(j).bins[i].getVMs().size();k++){
@@ -208,6 +209,10 @@ public class InfrastructureModel {
 				}
 			}
 		}
+		 */
+
+
+		//Executing consolidation on each split infrastructure
 		for(int i=0;i<splitIMs.size();i++){
 			NerualNetworkConsolidator consolidate = new NerualNetworkConsolidator(toConsolidate,0);
 			consolidatedIMs.add(consolidate.optimize(splitIMs.get(i)));
@@ -218,19 +223,28 @@ public class InfrastructureModel {
 	/**
 	 * Merge the split infrastructure models back
 	 */
-	public static void mergeIMs(IaaSService toConsolidate){
+	public InfrastructureModel mergeIMs(IaaSService toConsolidate){
 		//Get consolidated pms
-		ArrayList<ModelPM> list = new ArrayList<>();
+		ArrayList<PhysicalMachine> list = new ArrayList<>();
 		for(int i=0;i<consolidatedIMs.size();i++){
 			for(int j=0;j<consolidatedIMs.get(i).bins.length;j++){
-				//list.add(splitIMs.get(i).bins[i]);
-				//System.out.println("PM-"+splitIMs.get(i).bins[j].hashCode()+"\t->\t VMs-"+splitIMs.get(i).bins[j].getVMs().size());
-				for(int k=0;k<consolidatedIMs.get(i).bins[j].getVMs().size();k++){
-					System.out.println("IM-"+i+"\t->\t PM-"+consolidatedIMs.get(i).bins[j].hashCode()+"\t->\t VMs-"+consolidatedIMs.get(i).bins[j].getVMs().get(k).hashCode());
-				}
-
+				list.add(consolidatedIMs.get(i).bins[j].getPM());
 			}
 		}
-		list.toArray();
+		//Convert ArrayList to Array to construct merged IM
+		PhysicalMachine[] convert = list.toArray(new PhysicalMachine[list.size()]);
+		//Merged IM
+		InfrastructureModel merged = new InfrastructureModel(convert, 1, false, 1);
+		//Checking mapping after consolidation
+		/*
+		for(int i=0;i<merged.bins.length;i++){
+			for(int j=0;j<merged.bins[i].getVMs().size();j++){
+				System.out.println("PM-"+merged.bins[i].hashCode()+"\t->\t VMs-"+merged.bins[i].getVMs().get(j).hashCode());
+			}
+		}
+		*/
+
+		//Merged IM
+		return merged;
 	}
 }
