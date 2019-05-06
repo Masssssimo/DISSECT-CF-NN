@@ -6,7 +6,6 @@ import hu.mta.sztaki.lpds.cloud.simulator.iaas.PhysicalMachine;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.constraints.ConstantConstraints;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.model.GenHelper;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.model.InfrastructureModel;
-import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.model.PreserveAllocations;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.model.improver.NonImprover;
 import hu.mta.sztaki.lpds.cloud.simulator.io.VirtualAppliance;
 import hu.mta.sztaki.lpds.cloud.simulator.util.CloudLoader;
@@ -15,7 +14,7 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class dataGenNN {
+public class DataSetGeneratorNN {
 
     private static InfrastructureModel IM;
     //  List of all permutations
@@ -34,10 +33,13 @@ public class dataGenNN {
     public static void main(String args[]) throws Exception{
 
         /**
-         *  Cloud with only 4 Physical Machine
+         *  Cloud with 4 Physical Machine
         */
         //File xml = new File("/home/mike/DISSECT-CF-NN/dcf-rp/config.xml");
 
+        /**
+         *  Cloud with 16 Physical Machine
+         */
         File xml = new File("/home/mike/SimulationMLP/SimulationTest/dcf-rp/config-16.xml");
         IaaSService cloud = CloudLoader.loadNodes(xml.toString());
         Timed.simulateUntilLastEvent();
@@ -47,10 +49,9 @@ public class dataGenNN {
         cloud.requestVM(va, minCaps, cloud.repositories.get(0), amountVM);
         Timed.simulateUntilLastEvent();
 
-        //Create Infrastructure Model
-        IM = new InfrastructureModel(cloud.machines.toArray(new PhysicalMachine[0]), 1, false, 1);
         //Execute optimization
-        IM = SplitMerge.splitBefore(cloud);
+        NerualNetworkConsolidator consolidate = new NerualNetworkConsolidator(cloud,0);
+        consolidate.consolidateSplit(cloud);
 
         /**
          *  Executing Neural Network Consolidation with 4 PM's

@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7bfb9fff-b3a4-413d-b8cb-8a2ea5bbf808" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/SplitMerge.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/NerualNetworkConsolidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/NerualNetworkConsolidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/dataGenNN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/dataGenNN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/model/InfrastructureModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/model/InfrastructureModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/SplitMerge.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/SplitMerge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/dataGenNN.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/DataSetGeneratorNN.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/NerualNetworkConsolidator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="193" lean-forward="true" selection-start-line="193" selection-end-line="193" />
+            <state relative-caret-position="577">
+              <caret line="348" column="8" selection-start-line="348" selection-start-column="8" selection-end-line="348" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -35,20 +34,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/model/InfrastructureModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="406">
-              <caret line="43" column="110" lean-forward="true" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="115" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/SplitMerge.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="59" column="131" selection-start-line="59" selection-start-column="131" selection-end-line="59" selection-end-column="131" />
+            <state relative-caret-position="-6">
+              <caret line="118" column="10" selection-start-line="118" selection-start-column="10" selection-end-line="118" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -57,10 +44,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/dataGenNN.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/SplitMerge.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
+            <state relative-caret-position="-112">
+              <caret line="11" column="60" selection-start-line="11" selection-start-column="60" selection-end-line="11" selection-end-column="60" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/DataSetGeneratorNN.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="342">
+              <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -96,10 +95,11 @@
         <option value="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/ModelBasedConsolidator.java" />
         <option value="$PROJECT_DIR$/config.xml" />
         <option value="$PROJECT_DIR$/config-16.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/NerualNetworkConsolidator.java" />
         <option value="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/model/InfrastructureModel.java" />
         <option value="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/dataGenNN.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/DataSetGeneratorNN.java" />
         <option value="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/SplitMerge.java" />
+        <option value="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/NerualNetworkConsolidator.java" />
       </list>
     </option>
   </component>
@@ -323,8 +323,8 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="dataGenNN" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.NN.dataGenNN" />
+    <configuration name="DataSetGeneratorNN" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.NN.DataSetGeneratorNN" />
       <module name="dcf-rp" />
       <extension name="coverage">
         <pattern>
@@ -338,7 +338,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.dataGenNN" />
+        <item itemvalue="Application.DataSetGeneratorNN" />
       </list>
     </recent_temporary>
   </component>
@@ -368,15 +368,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28401726" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.5863931" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.100431964" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4697624" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.32937366" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -595,28 +595,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/model/InfrastructureModel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="406">
-          <caret line="43" column="110" lean-forward="true" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="115" />
+        <state relative-caret-position="-6">
+          <caret line="118" column="10" selection-start-line="118" selection-start-column="10" selection-end-line="118" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/NerualNetworkConsolidator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/DataSetGeneratorNN.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="193" lean-forward="true" selection-start-line="193" selection-end-line="193" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/dataGenNN.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
+        <state relative-caret-position="342">
+          <caret line="51" column="8" selection-start-line="51" selection-start-column="8" selection-end-line="51" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -625,8 +615,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/SplitMerge.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="59" column="131" selection-start-line="59" selection-start-column="131" selection-end-line="59" selection-end-column="131" />
+        <state relative-caret-position="-112">
+          <caret line="11" column="60" selection-start-line="11" selection-start-column="60" selection-end-line="11" selection-end-column="60" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/NerualNetworkConsolidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="348" column="8" selection-start-line="348" selection-start-column="8" selection-end-line="348" selection-end-column="8" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

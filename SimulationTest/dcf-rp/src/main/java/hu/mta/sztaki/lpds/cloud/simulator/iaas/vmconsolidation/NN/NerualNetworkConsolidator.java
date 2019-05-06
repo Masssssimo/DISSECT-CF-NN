@@ -296,5 +296,60 @@ public class NerualNetworkConsolidator extends ModelBasedConsolidator {
         return sol;
     }
 
+    /**
+     * Consolidate the split InfrastructureModels individually via NeuralNetworkConsolidator
+     */
+    public InfrastructureModel consolidateSplit(IaaSService toConsolidate){
+        //Split and Merge object for splitting the IaaSService
+        SplitMerge sm = new SplitMerge();
+        //Splitting the IaaSService
+        ArrayList<InfrastructureModel> splitIMs = sm.splitBefore(toConsolidate,4);
 
+        //Checking mapping before consolidation
+        /*
+		for(int j=0;j<splitIMs.size();j++){
+			for(int i=0;i<splitIMs.get(j).bins.length;i++){
+				for(int k=0;k<splitIMs.get(j).bins[i].getVMs().size();k++){
+					System.out.println("IM-"+i+"\t->\t PM-"+splitIMs.get(j).bins[i].hashCode()+"\t->\t VMs-"+splitIMs.get(j).bins[i].getVMs().get(k).hashCode());
+				}
+			}
+		}
+		*/
+
+
+        //Consolidated split infrastructureModels
+        ArrayList<InfrastructureModel> consolidatedIMs = new ArrayList<>();
+
+        //Executing consolidation on each split infrastructure
+        for(int i=0;i<splitIMs.size();i++){
+            consolidatedIMs.add(optimize(splitIMs.get(i)));
+        }
+
+        //Check mapping after consolidation
+        /*
+        for(int j=0;j<consolidatedIMs.size();j++){
+            for(int i=0;i<consolidatedIMs.get(j).bins.length;i++){
+                for(int k=0;k<consolidatedIMs.get(j).bins[i].getVMs().size();k++){
+                    System.err.println("IM-"+i+"\t->\t PM-"+consolidatedIMs.get(j).bins[i].hashCode()+"\t->\t VMs-"+consolidatedIMs.get(j).bins[i].getVMs().get(k).hashCode());
+                }
+            }
+        }
+        */
+
+
+
+        //Merge InfrastructureModel into one instance
+        InfrastructureModel merged = sm.mergeIMs(consolidatedIMs);
+
+        //Checking mapping after merge
+        /*
+		for(int i=0;i<merged.bins.length;i++){
+			for(int j=0;j<merged.bins[i].getVMs().size();j++){
+				System.out.println("PM-"+merged.bins[i].hashCode()+"\t->\t VMs-"+merged.bins[i].getVMs().get(j).hashCode());
+			}
+		}
+		*/
+
+        return merged;
+    }
 }
