@@ -12,6 +12,7 @@ import org.nd4j.linalg.api.ops.impl.indexaccum.IAMax;
 import org.nd4j.linalg.dataset.api.preprocessor.StandardizeStrategy;
 import org.nd4j.linalg.dataset.api.preprocessor.stats.DistributionStats;
 import org.nd4j.linalg.factory.Nd4j;
+import play.mvc.WebSocket;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -304,7 +305,9 @@ public class NerualNetworkConsolidator extends ModelBasedConsolidator {
         SplitMerge sm = new SplitMerge();
         //Splitting the IaaSService
         ArrayList<InfrastructureModel> splitIMs = sm.splitBefore(toConsolidate,4);
-
+        for(InfrastructureModel IM: splitIMs){
+            System.out.println(IM.bins.length);
+        }
         //Checking mapping before consolidation
         /*
 		for(int j=0;j<splitIMs.size();j++){
