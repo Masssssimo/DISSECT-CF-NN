@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1707f346-ac97-4eb1-8c63-de0db3f1c1c5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../dcf-rp/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dcf-rp/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dcf-rp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dcf-rp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trace.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trace.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../TestCases/.~lock.Test-1.ods#" beforeDir="false" afterPath="$PROJECT_DIR$/../../TestCases/.~lock.Test-1.ods#" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../TestCases/.~lock.TestCase1info.odt#" beforeDir="false" afterPath="$PROJECT_DIR$/../../TestCases/.~lock.TestCase1info.odt#" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../TestCases/Test-1.ods" beforeDir="false" afterPath="$PROJECT_DIR$/../../TestCases/Test-1.ods" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../TestCases/TestCase1info.odt" beforeDir="false" afterPath="$PROJECT_DIR$/../../TestCases/TestCase1info.odt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dcf-rp/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/NerualNetworkConsolidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../dcf-rp/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/NerualNetworkConsolidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dcf-rp/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/SplitMerge.java" beforeDir="false" afterPath="$PROJECT_DIR$/../dcf-rp/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/SplitMerge.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dcf-rp/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/model/InfrastructureModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../dcf-rp/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/model/InfrastructureModel.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,7 +19,7 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -62,6 +60,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -120,8 +120,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -168,8 +166,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="71" y="25" width="1849" height="1055" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.213533" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21575153" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />

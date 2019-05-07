@@ -234,14 +234,14 @@ public class NerualNetworkConsolidator extends ModelBasedConsolidator {
                 System.err.println("Too many VMs too Consolidate");
                 return sol;
         }
+        //Check how many virtual machine instances for JobDispatchDemo
 
-        /* Check how many virtual machine instances for JobDispatchDemo
         if(sol.items.length==11){
             System.err.println("VM amount -\t"+sol.items.length);
         }else{
             System.out.println("VM amount -\t"+sol.items.length);
         }
-        */
+
 
 
         // Standard deviation and means
@@ -305,9 +305,7 @@ public class NerualNetworkConsolidator extends ModelBasedConsolidator {
         SplitMerge sm = new SplitMerge();
         //Splitting the IaaSService
         ArrayList<InfrastructureModel> splitIMs = sm.splitBefore(toConsolidate,4);
-        for(InfrastructureModel IM: splitIMs){
-            System.out.println(IM.bins.length);
-        }
+
         //Checking mapping before consolidation
         /*
 		for(int j=0;j<splitIMs.size();j++){

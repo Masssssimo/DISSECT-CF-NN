@@ -3,11 +3,9 @@ package hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.model;
 import java.util.ArrayList;
 import java.util.List;
 
-import hu.mta.sztaki.lpds.cloud.simulator.iaas.IaaSService;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.PhysicalMachine;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.VirtualMachine;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.constraints.ResourceConstraints;
-import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.NN.NerualNetworkConsolidator;
 
 /**
  * Represents a possible solution of the VM consolidation problem, i.e., a
