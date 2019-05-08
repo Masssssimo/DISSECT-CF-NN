@@ -2,11 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1707f346-ac97-4eb1-8c63-de0db3f1c1c5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../dcf-rp/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dcf-rp/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config-16.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dcf-rp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dcf-rp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dcf-rp/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/DataSetGeneratorNN.java" beforeDir="false" afterPath="$PROJECT_DIR$/../dcf-rp/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/DataSetGeneratorNN.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dcf-rp/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/NerualNetworkConsolidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../dcf-rp/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/NerualNetworkConsolidator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dcf-rp/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/SplitMerge.java" beforeDir="false" afterPath="$PROJECT_DIR$/../dcf-rp/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/SplitMerge.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dcf-rp/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/model/InfrastructureModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/../dcf-rp/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/model/InfrastructureModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.~lock.Trace.csv#" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Synthetic.converted" beforeDir="false" afterPath="$PROJECT_DIR$/Synthetic.converted" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Trace.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trace.csv" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -19,7 +23,56 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/examples/jobhistoryprocessor/JobDispatchingDemo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="75" column="13" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="48" selection-start-line="9" selection-start-column="48" selection-end-line="9" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config-16.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="12483">
+              <caret line="657" column="8" selection-start-line="657" selection-start-column="8" selection-end-line="657" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Synthetic.converted">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="34" selection-end-line="499" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Trace.csv">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="787">
+              <caret line="499" selection-start-line="499" selection-end-line="499" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -37,6 +90,7 @@
         <option value="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/examples/jobhistoryprocessor/JobDispatchingDemo.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/config.xml" />
+        <option value="$PROJECT_DIR$/config-16.xml" />
         <option value="$PROJECT_DIR$/Trace.csv" />
       </list>
     </option>
@@ -61,7 +115,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -99,27 +152,16 @@
               <item name="dissect-cf-examples" type="b2602c69:ProjectViewProjectNode" />
               <item name="dcfe-rp" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dissect-cf-examples" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dcfe-rp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="dissect-cf-examples" type="b2602c69:ProjectViewProjectNode" />
-              <item name="dcfe-rp" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="examples" type="462c0819:PsiDirectoryNode" />
+              <item name="jobhistoryprocessor" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -127,6 +169,11 @@
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552659722046" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -144,7 +191,7 @@
     <configuration name="Job Dispatch" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="hu.mta.sztaki.lpds.cloud.simulator.examples.jobhistoryprocessor.JobDispatchingDemo" />
       <module name="dcfe-rp" />
-      <option name="PROGRAM_PARAMETERS" value="10/0/1/100/1/10/1/16/16 10000 $PROJECT_DIR$/config.xml 60000 " />
+      <option name="PROGRAM_PARAMETERS" value="11/95/1/100/1/10/1/64/64 10000 $PROJECT_DIR$/config-16.xml 60000 " />
       <option name="VM_PARAMETERS" value="-Dhu.mta.sztaki.lpds.cloud.simulator.examples.consolidator=hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.NN.NerualNetworkConsolidator" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -168,7 +215,7 @@
     <frame x="71" y="25" width="1849" height="1055" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21575153" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22074321" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -177,7 +224,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5723542" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.13174947" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -251,20 +298,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/examples/jobhistoryprocessor/JobDispatchingDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="17" column="47" selection-start-line="17" selection-start-column="47" selection-end-line="17" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/examples/jobhistoryprocessor/JobDispatchingDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="75" column="13" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -275,17 +322,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config-16.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="12483">
+          <caret line="657" column="8" selection-start-line="657" selection-start-column="8" selection-end-line="657" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Synthetic.converted">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="72" column="38" selection-end-line="686" />
+        <state relative-caret-position="171">
+          <caret line="9" column="34" selection-end-line="499" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Trace.csv">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="179">
-          <caret line="654" column="40" lean-forward="true" selection-start-line="654" selection-start-column="40" selection-end-line="654" selection-end-column="40" />
+        <state relative-caret-position="787">
+          <caret line="499" selection-start-line="499" selection-end-line="499" />
         </state>
       </provider>
     </entry>

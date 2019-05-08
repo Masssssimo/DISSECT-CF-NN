@@ -12,7 +12,6 @@ import org.nd4j.linalg.api.ops.impl.indexaccum.IAMax;
 import org.nd4j.linalg.dataset.api.preprocessor.StandardizeStrategy;
 import org.nd4j.linalg.dataset.api.preprocessor.stats.DistributionStats;
 import org.nd4j.linalg.factory.Nd4j;
-import play.mvc.WebSocket;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -189,6 +188,14 @@ public class NerualNetworkConsolidator extends ModelBasedConsolidator {
 
     @Override
     public InfrastructureModel optimize(final InfrastructureModel input) {
+        if(input.bins.length>4){
+            return consolidateSplit(input);
+        }else{
+            return consolidate(input);
+        }
+    }
+
+    private InfrastructureModel consolidate(InfrastructureModel input){
         InfrastructureModel sol=new InfrastructureModel(input, PreserveAllocations.singleton, NonImprover.singleton);
         //Selecting what network
         Integer index = null;
@@ -241,8 +248,7 @@ public class NerualNetworkConsolidator extends ModelBasedConsolidator {
         }else{
             System.out.println("VM amount -\t"+sol.items.length);
         }
-
-
+        
 
         // Standard deviation and means
         DistributionStats DisStat = new DistributionStats(mean.get(index), std.get(index));
@@ -300,7 +306,7 @@ public class NerualNetworkConsolidator extends ModelBasedConsolidator {
     /**
      * Consolidate the split InfrastructureModels individually via NeuralNetworkConsolidator
      */
-    public InfrastructureModel consolidateSplit(IaaSService toConsolidate){
+    public InfrastructureModel consolidateSplit(InfrastructureModel toConsolidate){
         //Split and Merge object for splitting the IaaSService
         SplitMerge sm = new SplitMerge();
         //Splitting the IaaSService
@@ -311,12 +317,11 @@ public class NerualNetworkConsolidator extends ModelBasedConsolidator {
 		for(int j=0;j<splitIMs.size();j++){
 			for(int i=0;i<splitIMs.get(j).bins.length;i++){
 				for(int k=0;k<splitIMs.get(j).bins[i].getVMs().size();k++){
-					System.out.println("IM-"+i+"\t->\t PM-"+splitIMs.get(j).bins[i].hashCode()+"\t->\t VMs-"+splitIMs.get(j).bins[i].getVMs().get(k).hashCode());
+					System.out.println("IM-"+j+"\t->\t PM-"+splitIMs.get(j).bins[i].hashCode()+"\t->\t VMs-"+splitIMs.get(j).bins[i].getVMs().get(k).hashCode());
 				}
 			}
 		}
-		*/
-
+        */
 
         //Consolidated split infrastructureModels
         ArrayList<InfrastructureModel> consolidatedIMs = new ArrayList<>();
@@ -331,13 +336,11 @@ public class NerualNetworkConsolidator extends ModelBasedConsolidator {
         for(int j=0;j<consolidatedIMs.size();j++){
             for(int i=0;i<consolidatedIMs.get(j).bins.length;i++){
                 for(int k=0;k<consolidatedIMs.get(j).bins[i].getVMs().size();k++){
-                    System.err.println("IM-"+i+"\t->\t PM-"+consolidatedIMs.get(j).bins[i].hashCode()+"\t->\t VMs-"+consolidatedIMs.get(j).bins[i].getVMs().get(k).hashCode());
+                    System.err.println("IM-"+j+"\t->\t PM-"+consolidatedIMs.get(j).bins[i].hashCode()+"\t->\t VMs-"+consolidatedIMs.get(j).bins[i].getVMs().get(k).hashCode());
                 }
             }
         }
-        */
-
-
+         */
 
         //Merge InfrastructureModel into one instance
         InfrastructureModel merged = sm.mergeIMs(consolidatedIMs);

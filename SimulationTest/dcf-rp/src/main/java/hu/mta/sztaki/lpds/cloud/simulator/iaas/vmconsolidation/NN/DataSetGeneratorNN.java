@@ -51,7 +51,7 @@ public class DataSetGeneratorNN {
 
         //Execute optimization
         NerualNetworkConsolidator consolidate = new NerualNetworkConsolidator(cloud,0);
-        consolidate.consolidateSplit(cloud);
+        consolidate.consolidateSplit(new InfrastructureModel(cloud.machines.toArray(new PhysicalMachine[0]), 1, false, 1));
 
         /**
          *  Executing Neural Network Consolidation with 4 PM's
