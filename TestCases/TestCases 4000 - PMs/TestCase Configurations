@@ -1,0 +1,19 @@
+Configuration - 4000 Physical-Machines:
+
+VM-OPTIONS:
+
+// Neural Network 
+-Dhu.mta.sztaki.lpds.cloud.simulator.examples.consolidator=hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.NN.NerualNetworkConsolidator
+
+
+// FirstFit Consolidator
+-Dhu.mta.sztaki.lpds.cloud.simulator.examples.consolidator=hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.simple.FirstFitConsolidator
+
+
+// Simple Consolidator
+-Dhu.mta.sztaki.lpds.cloud.simulator.examples.consolidator=hu.mta.sztaki.lpds.cloud.simulator.iaas.consolidation.SimpleConsolidator
+
+
+PROGRAM ARGS: Test case Diagram 1)
+11/95/1/100/1/10/1/64/64 10000 /home/mike/SimulationMLP/SimulationTest/dcfe-rp/Automated-4000.xml 60000 
+-----------------------------------------------------------------------------------------------------------------------------------------------------

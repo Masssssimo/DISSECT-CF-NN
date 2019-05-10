@@ -40,7 +40,7 @@ public class DataSetGeneratorNN {
         /**
          *  Cloud with 16 Physical Machine
          */
-        File xml = new File("/home/mike/SimulationMLP/SimulationTest/dcf-rp/config-16.xml");
+        File xml = new File("/home/mike/SimulationMLP/SimulationTest/dcf-rp/config-Automated.xml");
         IaaSService cloud = CloudLoader.loadNodes(xml.toString());
         Timed.simulateUntilLastEvent();
         VirtualAppliance va = new VirtualAppliance("BASE-VA", 1000, 0, false, 10000l);

@@ -29,7 +29,7 @@ import hu.mta.sztaki.lpds.cloud.simulator.iaas.constraints.ResourceConstraints;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.pmscheduling.ConsolidationFriendlyPmScheduler;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.pso.PsoConsolidator;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.simple.AbcConsolidator;
-import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.simple.FirstFitConsolidator;
+import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.simple.NullConsolidation;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.simple.GaConsolidator;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmscheduling.FirstFitScheduler;
 import hu.mta.sztaki.lpds.cloud.simulator.io.NetworkNode.NetworkException;
@@ -183,7 +183,7 @@ public class VMConsolidationTest extends IaaSRelatedFoundation {
 		//empty. If we turn on the consolidator, we expect it to move one of the
 		//VMs from PM1 to PM2
 
-		FirstFitConsolidator ffc = new FirstFitConsolidator(basic, 600);
+		NullConsolidation ffc = new NullConsolidation(basic, 600);
 		Timed.simulateUntil(Timed.getFireCount()+1000);
 		
 		if(ffc.getUpperThreshold() != 1.0) {
@@ -213,7 +213,7 @@ public class VMConsolidationTest extends IaaSRelatedFoundation {
 		//Now, PM1 contains 6 VMs and PM2 one VM. If we turn on the consolidator,
 		//we expect moving some of the VMs of PM1 to PM2.
 		
-		FirstFitConsolidator ffc = new FirstFitConsolidator(basic, 600);
+		NullConsolidation ffc = new NullConsolidation(basic, 600);
 		Timed.simulateUntil(Timed.getFireCount()+1000);
 		
 		if(ffc.getUpperThreshold() != 1.0) {
@@ -239,7 +239,7 @@ public class VMConsolidationTest extends IaaSRelatedFoundation {
 		//Now, both PMs contain one VM each. If we turn on the consolidator, 
 		//we expect it to consolidate the two VMs to a single PM.
 
-		new FirstFitConsolidator(basic, 600);
+		new NullConsolidation(basic, 600);
 		Timed.simulateUntil(Timed.getFireCount()+1000);
 
 		Assert.assertEquals(1, basic.runningMachines.size());
@@ -262,7 +262,7 @@ public class VMConsolidationTest extends IaaSRelatedFoundation {
 		//Now, PM1 contains one VM and PM2 two VMs. If we turn on the consolidator, 
 		//we expect only one running machine.
 		
-		new FirstFitConsolidator(basic, 600);
+		new NullConsolidation(basic, 600);
 		Timed.simulateUntil(Timed.getFireCount()+1000);
 
 		Assert.assertEquals(1, basic.runningMachines.size());
@@ -286,7 +286,7 @@ public class VMConsolidationTest extends IaaSRelatedFoundation {
 		//Now,we have three PMs containing one VM each. If we turn on the consolidator, 
 		//we expect it to consolidate all VMs to a single PM.
 		
-		new FirstFitConsolidator(basic, 600);
+		new NullConsolidation(basic, 600);
 		Timed.simulateUntil(Timed.getFireCount()+1000);
 		
 		Assert.assertEquals(1, basic.runningMachines.size());

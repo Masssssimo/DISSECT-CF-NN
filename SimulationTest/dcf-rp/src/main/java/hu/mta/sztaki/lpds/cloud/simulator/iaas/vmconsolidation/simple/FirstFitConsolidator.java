@@ -8,6 +8,8 @@ import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.ModelBasedConsoli
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.model.InfrastructureModel;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.model.ModelPM;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.model.ModelVM;
+import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.model.PreserveAllocations;
+import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.model.improver.NonImprover;
 
 /**
  * @author Rene Ponto
@@ -59,15 +61,13 @@ public class FirstFitConsolidator extends ModelBasedConsolidator {
 			}
 		}
 
-
 		/*
 		 * //clears the VMlist of each PM, so no VM is in the list more than once
 		 * for(ModelPM pm : getBins()) { List<ModelVM> allVMsOnPM = pm.getVMs();
 		 * Set<ModelVM> setItems = new LinkedHashSet<ModelVM>(allVMsOnPM);
 		 * allVMsOnPM.clear(); allVMsOnPM.addAll(setItems); }
 		 */
-
-		return sol;
+		return new InfrastructureModel(sol, PreserveAllocations.singleton, NonImprover.singleton);
 	}
 
 	interface PMCheck {
@@ -118,13 +118,7 @@ public class FirstFitConsolidator extends ModelBasedConsolidator {
 	 * changing the status of the PM to 'overAllocated'. This is done by first fit.
 	 * We focus first on reusing an existing PM rather than starting a new one.
 	 * 
-	 * @param toMig The VM which shall be migrated.ModelVM[] mvms = source.getVMs().toArray(ModelVM.mvmArrSample);
-		for (int i = 1; i <= mvms.length; i++) {
-			final ModelVM v = mvms[mvms.length - i];
-			final ModelPM t = getMigPm(v, sol);
-			if (t != null) {
-				source.migrateVM(v, t);
-			} else {
+	 * @param toMig The VM which shall be migrated.
 	 * @return A PM where the given VM can be migrated; starts a new PM if there is
 	 *         no running VM with the needed resources; null is returned if no
 	 *         appropriate PM was found.
