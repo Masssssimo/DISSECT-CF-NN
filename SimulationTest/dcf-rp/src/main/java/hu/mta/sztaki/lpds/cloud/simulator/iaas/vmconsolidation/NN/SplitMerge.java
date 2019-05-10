@@ -194,24 +194,9 @@ public class SplitMerge {
      */
 
     public static InfrastructureModel mergeIMs(ArrayList<InfrastructureModel> splitIMs){
-        //Get to total amount of PhysicalMachines within the InfrastructureModels
-        int amountPMs = 0;
-        for(InfrastructureModel IM : splitIMs){
-            amountPMs+=IM.bins.length;
-        }
-
-        //Add every bin from the InfrastructureModels to the Array of PhysicalMachines
-        int index = 0;
-        PhysicalMachine[] toMerge = new PhysicalMachine[amountPMs];
-
-        for(InfrastructureModel IM : splitIMs){
-            for(int i=0;i<IM.bins.length;i++){
-                toMerge[index] = IM.bins[i].getPM();
-                index++;
-            }
-        }
-        //Construct new InfrastructureModel
-        InfrastructureModel merged = new InfrastructureModel(toMerge, 1, false, 1);
+        InfrastructureModel[] x = splitIMs.toArray(new InfrastructureModel[splitIMs.size()]);
+         //Construct new InfrastructureModel
+        InfrastructureModel merged = new InfrastructureModel(x);
         return merged;
     }
 }

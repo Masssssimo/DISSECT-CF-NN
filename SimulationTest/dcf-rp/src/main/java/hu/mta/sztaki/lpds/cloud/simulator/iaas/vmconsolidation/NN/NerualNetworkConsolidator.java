@@ -248,7 +248,8 @@ public class NerualNetworkConsolidator extends ModelBasedConsolidator {
         }else{
             System.out.println("VM amount -\t"+sol.items.length);
         }
-        
+
+
 
         // Standard deviation and means
         DistributionStats DisStat = new DistributionStats(mean.get(index), std.get(index));
@@ -323,6 +324,7 @@ public class NerualNetworkConsolidator extends ModelBasedConsolidator {
 		}
         */
 
+
         //Consolidated split infrastructureModels
         ArrayList<InfrastructureModel> consolidatedIMs = new ArrayList<>();
 
@@ -340,7 +342,8 @@ public class NerualNetworkConsolidator extends ModelBasedConsolidator {
                 }
             }
         }
-         */
+        */
+
 
         //Merge InfrastructureModel into one instance
         InfrastructureModel merged = sm.mergeIMs(consolidatedIMs);
@@ -352,7 +355,8 @@ public class NerualNetworkConsolidator extends ModelBasedConsolidator {
 				System.out.println("PM-"+merged.bins[i].hashCode()+"\t->\t VMs-"+merged.bins[i].getVMs().get(j).hashCode());
 			}
 		}
-		*/
+         */
+
 
         return merged;
     }

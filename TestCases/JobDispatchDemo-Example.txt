@@ -16,11 +16,14 @@ VM-OPTIONS:
 
 PROGRAM ARGS: Test case Diagram 1)
 10/0/1/100/1/10/1/16/16 10000 /home/mike/SimulationMLP/SimulationTest/dcfe-rp/config.xml 60000
+-----------------------------------------------------------------------------------------------------------------------------------------------------
+PROGRAM ARGS: Config-1 (16 Physical Machines):
 
+11/95/1/100/1/10/1/64/64 10000 /home/mike/SimulationMLP/SimulationTest/dcfe-rp/config-16.xml 60000 
 
+PROGRAM ARGS: Config-2 (16 Physical Machines):
 
- 
-
+  
 -----------------------------------------------------------------------------------------------------------------------------------------------------
 PROGRAM ARGS: TESTCASES (8-11 VMs needed at some point):
 

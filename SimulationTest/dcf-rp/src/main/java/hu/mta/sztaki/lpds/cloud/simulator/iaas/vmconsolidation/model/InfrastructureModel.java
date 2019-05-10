@@ -62,11 +62,11 @@ public class InfrastructureModel {
 	 * In this part all PMs and VMs will be put inside this abstract model. For that
 	 * the bins-list contains all PMs as ModelPMs and all VMs as ModelVMs
 	 * afterwards.
-	 * 
+	 *
 	 * @param pmList All PMs which are currently registered in the IaaS service.
 	 */
 	public InfrastructureModel(final PhysicalMachine[] pmList, final double lowerThreshold, final boolean onlyNonEmpty,
-			final double upperThreshold) {
+							   final double upperThreshold) {
 		final List<ModelPM> pminit = new ArrayList<>(pmList.length);
 		final List<ModelVM> vminit = new ArrayList<>(pmList.length);
 		int nonHostingRunningPMs = 0;
@@ -125,7 +125,7 @@ public class InfrastructureModel {
 	 * Decides if this fitness value is better than the other. Note that this
 	 * relation is not a total order: it is possible that from two fitness values,
 	 * no one is better than the other.
-	 * 
+	 *
 	 * @param other Another fitness value
 	 * @return true if this is better than other
 	 */
@@ -135,7 +135,7 @@ public class InfrastructureModel {
 	}
 
 	protected static final boolean betterThan(final double oA1, final int nAPM1, final int nMg1, final double oA2,
-			final int nAPM2, final int nMg2) {
+											  final int nAPM2, final int nMg2) {
 		// The primary objective is the total overload. If there is a clear
 		// difference (>1%) in that, this decides which is better.
 		// If there is no significant difference in the total overload, then
@@ -174,5 +174,44 @@ public class InfrastructureModel {
 		final StringBuilder result = overAllocated.append(',').append(activePMs).append(',').append(migrations);
 
 		return result.toString();
+	}
+
+	public InfrastructureModel(InfrastructureModel[] toMerge) {
+
+		int binsSize = 0;
+		int itemsSize = 0;
+
+		for (int i=0;i<toMerge.length;i++) {
+			for(int j=0;j<toMerge[i].bins.length;j++) {
+				binsSize++;
+				for(int k=0;k<toMerge[i].bins[j].getVMs().size();k++){
+					itemsSize++;
+				}
+			}
+		}
+
+		bins = new ModelPM[binsSize];
+		items = new ModelVM[itemsSize];
+		int binsCounter = 0;
+		int itemCounter = 0;
+
+		for (int i=0;i<toMerge.length;i++) {
+			for(int j=0;j<toMerge[i].bins.length;j++) {
+				//Add bins from toMerge to new InfrastructureModel
+				bins[binsCounter] = new ModelPM(toMerge[i].bins[j]);
+				binsCounter++;
+				//Add items from toMerge to InfrastructureModel
+				//Add mapping of item to bin
+				for(int k=0;k<toMerge[i].bins[j].getVMs().size();k++){
+					items[itemCounter] = new ModelVM(toMerge[i].bins[j].getVMs().get(k));
+					bins[j].addVM(items[itemCounter]);
+					itemCounter++;
+				}
+			}
+		}
+
+
+
+		calculateFitness();
 	}
 }

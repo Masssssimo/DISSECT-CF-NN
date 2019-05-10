@@ -45,13 +45,15 @@ public class DataSetGeneratorNN {
         Timed.simulateUntilLastEvent();
         VirtualAppliance va = new VirtualAppliance("BASE-VA", 1000, 0, false, 10000l);
         cloud.repositories.get(0).registerObject(va);
-        ConstantConstraints minCaps = new ConstantConstraints(1.5, 0.001, true, 9999999999L);
+        ConstantConstraints minCaps = new ConstantConstraints(1.7, 0.001, true, 9999999999L);
         cloud.requestVM(va, minCaps, cloud.repositories.get(0), amountVM);
         Timed.simulateUntilLastEvent();
 
+        IM = new InfrastructureModel(cloud.machines.toArray(new PhysicalMachine[0]), 1, false, 1);
+
         //Execute optimization
         NerualNetworkConsolidator consolidate = new NerualNetworkConsolidator(cloud,0);
-        consolidate.consolidateSplit(new InfrastructureModel(cloud.machines.toArray(new PhysicalMachine[0]), 1, false, 1));
+        consolidate.consolidateSplit(IM);
 
         /**
          *  Executing Neural Network Consolidation with 4 PM's
