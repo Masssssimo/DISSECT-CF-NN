@@ -2,17 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1707f346-ac97-4eb1-8c63-de0db3f1c1c5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../dcf-rp/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../dcf-rp/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/configXML.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config-Automated.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dcf-rp/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dcf-rp/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../dcf-rp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dcf-rp/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dcf-rp/Consolidation Properties/PIK-Abc-RP-sdm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dcf-rp/Consolidation Properties/PIK-Ga-RP-sdm.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dcf-rp/Consolidation Properties/PIK-Pso-RP-sdm.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../dcf-rp/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/DataSetGeneratorNN.java" beforeDir="false" afterPath="$PROJECT_DIR$/../dcf-rp/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/DataSetGeneratorNN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dcf-rp/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/simple/FirstFitConsolidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../dcf-rp/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/simple/NullConsolidation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dcf-rp/src/test/java/at/ac/uibk/dps/cloud/simulator/test/simple/cloud/vmconsolidation/VMConsolidationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/../dcf-rp/src/test/java/at/ac/uibk/dps/cloud/simulator/test/simple/cloud/vmconsolidation/VMConsolidationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dcf-rp/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/NerualNetworkConsolidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../dcf-rp/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/NeuralNetworkConsolidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dcf-rp/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/configXML.java" beforeDir="false" afterPath="$PROJECT_DIR$/../dcf-rp/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/configXML.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Synthetic.converted" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Trace.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trace.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/consolidationProperties.xml" beforeDir="false" afterPath="$PROJECT_DIR$/consolidationProperties.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/examples/jobhistoryprocessor/JobDispatchingDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/examples/jobhistoryprocessor/JobDispatchingDemo.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,35 +28,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/examples/jobhistoryprocessor/JobDispatchingDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="75" column="13" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
+            <state relative-caret-position="228">
+              <caret line="417" column="12" selection-start-line="417" selection-start-column="12" selection-end-line="417" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#8814#8827#0" expanded="true" />
+                <element signature="e#15551#15565#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/consolidationProperties.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Trace.csv">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="13">
-              <caret line="495" column="38" selection-start-line="495" selection-start-column="38" selection-end-line="495" selection-end-column="38" />
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Synthetic.converted">
+        <entry file="file://$PROJECT_DIR$/PIK-IPLEX.swf.converted">
           <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PIK-IPLEX.swf">
+          <provider selected="true" editor-type-id="LargeFileEditor" />
         </entry>
       </file>
     </leaf>
@@ -72,13 +72,15 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/ABC.csv" />
-        <option value="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/examples/jobhistoryprocessor/JobDispatchingDemo.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/config.xml" />
         <option value="$PROJECT_DIR$/config-16.xml" />
         <option value="$PROJECT_DIR$/config-Automated.xml" />
         <option value="$PROJECT_DIR$/Synthetic.converted" />
+        <option value="$PROJECT_DIR$/consolidationProperties.xml" />
         <option value="$PROJECT_DIR$/Trace.csv" />
+        <option value="$PROJECT_DIR$/PIK-IPLEX.swf.converted" />
+        <option value="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/examples/jobhistoryprocessor/JobDispatchingDemo.java" />
       </list>
     </option>
   </component>
@@ -89,11 +91,11 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="71" />
-    <option name="y" value="25" />
-    <option name="width" value="925" />
-    <option name="height" value="1055" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="426" />
+    <option name="y" value="27" />
+    <option name="width" value="915" />
+    <option name="height" value="789" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -147,8 +149,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -178,8 +180,8 @@
     <configuration name="Job Dispatch" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="hu.mta.sztaki.lpds.cloud.simulator.examples.jobhistoryprocessor.JobDispatchingDemo" />
       <module name="dcfe-rp" />
-      <option name="PROGRAM_PARAMETERS" value="PIK-IPLEX.swf 10000 $PROJECT_DIR$/Automated-4000.xml 60000 " />
-      <option name="VM_PARAMETERS" value="-Dhu.mta.sztaki.lpds.cloud.simulator.examples.consolidator=hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.NN.NerualNetworkConsolidator" />
+      <option name="PROGRAM_PARAMETERS" value="PIK-IPLEX.swf 100 $PROJECT_DIR$/config-16.xml 60000 " />
+      <option name="VM_PARAMETERS" value="-Dhu.mta.sztaki.lpds.cloud.simulator.examples.consolidator=hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.NN.NeuralNetworkConsolidator" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -199,9 +201,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="71" y="25" width="1849" height="1055" extended-state="6" />
+    <frame x="74" y="27" width="1846" height="1053" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23183583" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24555555" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -210,7 +213,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.9438445" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3402399" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -218,7 +221,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32937366" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32937366" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3293348" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -229,7 +232,7 @@
       <window_info anchor="right" id="Palette&#9;" order="7" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.26234055" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23460898" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -238,12 +241,12 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.39308855" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.69330454" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32937366" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.32937366" />
@@ -315,26 +318,32 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Synthetic.converted" />
     <entry file="file://$PROJECT_DIR$/consolidationProperties.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="41" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Trace.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PIK-IPLEX.swf">
+      <provider selected="true" editor-type-id="LargeFileEditor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PIK-IPLEX.swf.converted">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/examples/jobhistoryprocessor/JobDispatchingDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="75" column="13" selection-start-line="75" selection-start-column="13" selection-end-line="75" selection-end-column="13" />
+        <state relative-caret-position="228">
+          <caret line="417" column="12" selection-start-line="417" selection-start-column="12" selection-end-line="417" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#8814#8827#0" expanded="true" />
+            <element signature="e#15551#15565#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Synthetic.converted">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Trace.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13">
-          <caret line="495" column="38" selection-start-line="495" selection-start-column="38" selection-end-line="495" selection-end-column="38" />
         </state>
       </provider>
     </entry>

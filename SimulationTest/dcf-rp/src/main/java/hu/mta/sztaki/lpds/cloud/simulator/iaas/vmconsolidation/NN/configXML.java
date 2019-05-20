@@ -27,7 +27,7 @@ public class configXML {
                             "\t\t\t<power model=\"hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.LinearConsumptionModel\" idle=\"3.4\" max=\"3.8\" inState=\"default\" />\n" +
                             "\t\t\t<power model=\"hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.ConstantConsumptionModel\" idle=\"0\" max=\"0\" inState=\"OFF\" />\n" +
                             "\t\t</powerstates>");
-            for(int j = 1;j<amount+1;j++){
+            for(int j= 1;j<amount+1;j++){
                 if(machineID != j) {
                     System.out.println(
                             "\t\t<latency towards=\"" + j + "\" value=\"5\" />");
@@ -50,7 +50,7 @@ public class configXML {
                             "\t\t\t<power model=\"hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.LinearConsumptionModel\" idle=\"3.4\" max=\"3.8\" inState=\"default\" />\n" +
                             "\t\t\t<power model=\"hu.mta.sztaki.lpds.cloud.simulator.energy.powermodelling.ConstantConsumptionModel\" idle=\"0\" max=\"0\" inState=\"OFF\" />\n" +
                             "\t\t</powerstates>");
-        for(int i=0;i<amount+1;i++){
+        for(int i=1;i<amount+1;i++){
             System.out.println("\t\t\t<latency towards=\""+i+"\" value=\"5\" />");
         }
 

@@ -2,22 +2,22 @@
  *  ========================================================================
  *  DISSECT-CF Examples
  *  ========================================================================
- *  
+ *
  *  This file is part of DISSECT-CF Examples.
- *  
+ *
  *  DISSECT-CF Examples is free software: you can redistribute it and/or
  *  modify it under the terms of the GNU General Public License as published
  *  by the Free Software Foundation, either version 3 of the License, or (at
  *  your option) any later version.
- *  
+ *
  *  DISSECT-CF Examples is distributed in the hope that it will be useful,
- *  but WITHOUT ANY WARRANTY; without even the implied warranty of 
+ *  but WITHOUT ANY WARRANTY; without even the implied warranty of
  *  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
  *  General Public License for more details.
  *
  *  You should have received a copy of the GNU General Public License along
  *  with DISSECT-CF Examples.  If not, see <http://www.gnu.org/licenses/>.
- *  
+ *
  *  (C) Copyright 2016, Gabor Kecskemeti (g.kecskemeti@ljmu.ac.uk)
  *  (C) Copyright 2013-15, Gabor Kecskemeti (gkecskem@dps.uibk.ac.at,
  *   									  kecskemeti.gabor@sztaki.mta.hu)
@@ -48,6 +48,7 @@ import hu.mta.sztaki.lpds.cloud.simulator.iaas.consolidation.Consolidator;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.consolidation.SimpleConsolidator;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.pmscheduling.PhysicalMachineController;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.pmscheduling.SchedulingDependentMachines;
+import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.NN.NeuralNetworkConsolidator;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmscheduling.FirstFitScheduler;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmscheduling.Scheduler;
 import hu.mta.sztaki.lpds.cloud.simulator.io.Repository;
@@ -61,13 +62,13 @@ import hu.mta.sztaki.lpds.cloud.simulator.util.PowerTransitionGenerator;
  * statistical data about the execution - including real and simulated runtimes
  * etc. It's help - which is printed out when it receives no command line
  * arguments - provides insights on the parametrization.
- * 
+ *
  * This class was used to provide the input for Figures 14-17 in the article:
  * <br>
  * <i>Gabor Kecskemeti: "DISSECT-CF: a simulator to foster energy-aware
  * scheduling in infrastructure clouds" . In Simulation Modeling Practice and
  * Theory, 2015, to Appear.<i> *
- * 
+ *
  * @author "Gabor Kecskemeti, Department of Computer Science, Liverpool John
  *         Moores University, (c) 2016"
  * @author "Gabor Kecskemeti, Laboratory of Parallel and Distributed Systems,
@@ -85,9 +86,9 @@ public class JobDispatchingDemo {
 				try {
 					while(mainThread.isAlive()&&i-->=0) {
 						sleep(1000);
-					}		
+					}
 				} catch (InterruptedException e) {
-					
+
 				}
 				if(mainThread.isAlive()) {
 					System.err.println("Terminated because of a timeout!");
@@ -412,5 +413,14 @@ public class JobDispatchingDemo {
 			}
 		}
 		System.err.println("Performance: " + (((double) vmcount) / duration) + " VMs/ms ");
+
+		Object x = consolidators.get(0);
+		if(x instanceof NeuralNetworkConsolidator){
+			for(int i=0;i<((NeuralNetworkConsolidator) x).ratio.size();i++){
+				if(((NeuralNetworkConsolidator)x).ratio.get(i)!=0){
+					System.out.println("VMs Hosted = "+i+"\t Count = "+((NeuralNetworkConsolidator)x).ratio.get(i));
+				}
+			}
+		}
 	}
 }
