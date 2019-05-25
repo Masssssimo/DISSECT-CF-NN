@@ -6,6 +6,7 @@ import hu.mta.sztaki.lpds.cloud.simulator.iaas.PhysicalMachine;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.constraints.ConstantConstraints;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.model.GenHelper;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.model.InfrastructureModel;
+import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.model.ModelPM;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.model.improver.NonImprover;
 import hu.mta.sztaki.lpds.cloud.simulator.io.VirtualAppliance;
 import hu.mta.sztaki.lpds.cloud.simulator.util.CloudLoader;
@@ -27,7 +28,7 @@ public class DataSetGeneratorNN {
     private static ArrayList<InfrastructureModel> optIM = new ArrayList<>();
 
     //Amount of VM's & PM's
-    private static int amountVM = 30;
+    private static int amountVM = 10;
     private static int amountPM = 4;
 
     public static void main(String args[]) throws Exception{
@@ -45,7 +46,7 @@ public class DataSetGeneratorNN {
         Timed.simulateUntilLastEvent();
         VirtualAppliance va = new VirtualAppliance("BASE-VA", 1000, 0, false, 10000l);
         cloud.repositories.get(0).registerObject(va);
-        ConstantConstraints minCaps = new ConstantConstraints(1.7, 0.001, true, 9999999999L);
+        ConstantConstraints minCaps = new ConstantConstraints(1.8, 0.001, true, 9999999999L);
         cloud.requestVM(va, minCaps, cloud.repositories.get(0), amountVM);
         Timed.simulateUntilLastEvent();
 
@@ -53,7 +54,25 @@ public class DataSetGeneratorNN {
 
         //Execute optimization
         NeuralNetworkConsolidator consolidate = new NeuralNetworkConsolidator(cloud,0);
-        consolidate.consolidateSplit(IM);
+        IM = consolidate.consolidateSplit(IM);
+
+        /*
+        for(ModelPM PM : IM.bins){
+            System.out.println(PM.getPM().getState());
+        }
+
+
+        for(int i=0;i<consolidate.ratio.size();i++){
+            if(consolidate.ratio.get(i)!=0){
+                System.out.println("VMs Hosted = "+i+"\t Count = "+consolidate.ratio.get(i));
+            }
+        }
+
+        for(PhysicalMachine PM : cloud.machines){
+            System.out.println(PM.isRunning());
+            System.out.println(PM.publicVms.size());
+        }
+        */
 
         /**
          *  Executing Neural Network Consolidation with 4 PM's

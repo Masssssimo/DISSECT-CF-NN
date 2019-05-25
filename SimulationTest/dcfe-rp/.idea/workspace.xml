@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1707f346-ac97-4eb1-8c63-de0db3f1c1c5" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../dcf-rp/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dcf-rp/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dcf-rp/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../dcf-rp/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dcf-rp/Consolidation Properties/PIK-Abc-RP-sdm.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dcf-rp/Consolidation Properties/PIK-Ga-RP-sdm.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dcf-rp/Consolidation Properties/PIK-Pso-RP-sdm.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dcf-rp/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/DataSetGeneratorNN.java" beforeDir="false" afterPath="$PROJECT_DIR$/../dcf-rp/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/DataSetGeneratorNN.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dcf-rp/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/NerualNetworkConsolidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/../dcf-rp/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/NeuralNetworkConsolidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dcf-rp/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/configXML.java" beforeDir="false" afterPath="$PROJECT_DIR$/../dcf-rp/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/configXML.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Synthetic.converted" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Trace.csv" beforeDir="false" afterPath="$PROJECT_DIR$/Trace.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/consolidationProperties.xml" beforeDir="false" afterPath="$PROJECT_DIR$/consolidationProperties.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/examples/jobhistoryprocessor/JobDispatchingDemo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/examples/jobhistoryprocessor/JobDispatchingDemo.java" afterDir="false" />
-    </list>
+    <list default="true" id="1707f346-ac97-4eb1-8c63-de0db3f1c1c5" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,30 +17,34 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/examples/jobhistoryprocessor/JobDispatchingDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="417" column="12" selection-start-line="417" selection-start-column="12" selection-end-line="417" selection-end-column="12" />
+            <state relative-caret-position="291">
+              <caret line="425" column="53" lean-forward="true" selection-start-line="425" selection-start-column="53" selection-end-line="425" selection-end-column="53" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#8814#8827#0" expanded="true" />
-                <element signature="e#15551#15565#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Trace.csv">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="jar://$MAVEN_REPOSITORY$/at/ac/uibk/dps/cloud/simulator/dissect-cf/1.0.2-SNAPSHOT/dissect-cf-1.0.2-SNAPSHOT-sources.jar!/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/NeuralNetworkConsolidator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-856">
+              <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PIK-IPLEX.swf.converted">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/PIK-IPLEX.swf">
-          <provider selected="true" editor-type-id="LargeFileEditor" />
+        <entry file="jar://$MAVEN_REPOSITORY$/at/ac/uibk/dps/cloud/simulator/dissect-cf/1.0.2-SNAPSHOT/dissect-cf-1.0.2-SNAPSHOT-sources.jar!/hu/mta/sztaki/lpds/cloud/simulator/iaas/IaaSService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1026">
+              <caret line="101" column="45" selection-start-line="101" selection-start-column="45" selection-end-line="101" selection-end-column="45" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -63,6 +53,14 @@
     <findStrings>
       <find>NW</find>
       <find>.</find>
+      <find>MIGRATION</find>
+      <find>Migration</find>
+      <find>virt</find>
+      <find>migration</find>
+      <find>execute</find>
+      <find>migra</find>
+      <find>migratio</find>
+      <find>migrat</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -78,8 +76,9 @@
         <option value="$PROJECT_DIR$/config-Automated.xml" />
         <option value="$PROJECT_DIR$/Synthetic.converted" />
         <option value="$PROJECT_DIR$/consolidationProperties.xml" />
-        <option value="$PROJECT_DIR$/Trace.csv" />
         <option value="$PROJECT_DIR$/PIK-IPLEX.swf.converted" />
+        <option value="$PROJECT_DIR$/RICC-2010-2.swf.converted" />
+        <option value="$PROJECT_DIR$/Trace.csv" />
         <option value="$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/examples/jobhistoryprocessor/JobDispatchingDemo.java" />
       </list>
     </option>
@@ -92,10 +91,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="426" />
-    <option name="y" value="27" />
-    <option name="width" value="915" />
-    <option name="height" value="789" />
+    <option name="x" value="71" />
+    <option name="y" value="25" />
+    <option name="width" value="925" />
+    <option name="height" value="1055" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -103,6 +102,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -145,19 +146,85 @@
               <item name="examples" type="462c0819:PsiDirectoryNode" />
               <item name="jobhistoryprocessor" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="dissect-cf-examples" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="dissect-cf-examples" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: at.ac.uibk.dps.cloud.simulator:dissect-cf:1.0.2-SNAPSHOT" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="dissect-cf-examples" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: at.ac.uibk.dps.cloud.simulator:dissect-cf:1.0.2-SNAPSHOT" type="70bed36:NamedLibraryElementNode" />
+              <item name="dissect-cf-1.0.2-SNAPSHOT.jar" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dissect-cf-examples" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: at.ac.uibk.dps.cloud.simulator:dissect-cf:1.0.2-SNAPSHOT" type="70bed36:NamedLibraryElementNode" />
+              <item name="dissect-cf-1.0.2-SNAPSHOT.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="simulator" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dissect-cf-examples" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: at.ac.uibk.dps.cloud.simulator:dissect-cf:1.0.2-SNAPSHOT" type="70bed36:NamedLibraryElementNode" />
+              <item name="dissect-cf-1.0.2-SNAPSHOT.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="simulator" type="462c0819:PsiDirectoryNode" />
+              <item name="iaas" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dissect-cf-examples" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: at.ac.uibk.dps.cloud.simulator:dissect-cf:1.0.2-SNAPSHOT" type="70bed36:NamedLibraryElementNode" />
+              <item name="dissect-cf-1.0.2-SNAPSHOT.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="simulator" type="462c0819:PsiDirectoryNode" />
+              <item name="iaas" type="462c0819:PsiDirectoryNode" />
+              <item name="consolidation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dissect-cf-examples" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: at.ac.uibk.dps.cloud.simulator:dissect-cf:1.0.2-SNAPSHOT" type="70bed36:NamedLibraryElementNode" />
+              <item name="dissect-cf-1.0.2-SNAPSHOT.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="simulator" type="462c0819:PsiDirectoryNode" />
+              <item name="iaas" type="462c0819:PsiDirectoryNode" />
+              <item name="vmconsolidation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dissect-cf-examples" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: at.ac.uibk.dps.cloud.simulator:dissect-cf:1.0.2-SNAPSHOT" type="70bed36:NamedLibraryElementNode" />
+              <item name="dissect-cf-1.0.2-SNAPSHOT.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="simulator" type="462c0819:PsiDirectoryNode" />
+              <item name="iaas" type="462c0819:PsiDirectoryNode" />
+              <item name="vmconsolidation" type="462c0819:PsiDirectoryNode" />
+              <item name="actions" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dissect-cf-examples" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: at.ac.uibk.dps.cloud.simulator:dissect-cf:1.0.2-SNAPSHOT" type="70bed36:NamedLibraryElementNode" />
+              <item name="dissect-cf-1.0.2-SNAPSHOT.jar" type="462c0819:PsiDirectoryNode" />
+              <item name="simulator" type="462c0819:PsiDirectoryNode" />
+              <item name="iaas" type="462c0819:PsiDirectoryNode" />
+              <item name="vmconsolidation" type="462c0819:PsiDirectoryNode" />
+              <item name="NN" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552659722046" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -180,7 +247,7 @@
     <configuration name="Job Dispatch" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="hu.mta.sztaki.lpds.cloud.simulator.examples.jobhistoryprocessor.JobDispatchingDemo" />
       <module name="dcfe-rp" />
-      <option name="PROGRAM_PARAMETERS" value="PIK-IPLEX.swf 100 $PROJECT_DIR$/config-16.xml 60000 " />
+      <option name="PROGRAM_PARAMETERS" value="16/5000/1/100/1/100/1/16/500 100 $PROJECT_DIR$/Automated-4000.xml 60000" />
       <option name="VM_PARAMETERS" value="-Dhu.mta.sztaki.lpds.cloud.simulator.examples.consolidator=hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.NN.NeuralNetworkConsolidator" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -200,11 +267,20 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
-    <frame x="74" y="27" width="1846" height="1053" extended-state="6" />
+    <frame x="74" y="27" width="1846" height="1053" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24555555" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25111112" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -213,15 +289,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3402399" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4242094" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5561614" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32937366" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3293348" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3293348" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3293348" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.3293348" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.64122134" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -268,6 +344,33 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/at/ac/uibk/dps/cloud/simulator/dissect-cf/1.0.2-SNAPSHOT/dissect-cf-1.0.2-SNAPSHOT-sources.jar!/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/actions/MigrationAction.java</url>
+          <line>95</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/at/ac/uibk/dps/cloud/simulator/dissect-cf/1.0.2-SNAPSHOT/dissect-cf-1.0.2-SNAPSHOT-sources.jar!/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/actions/MigrationAction.java</url>
+          <line>96</line>
+          <properties />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>input</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
   <component name="editorHistoryManager">
     <entry file="jar:///usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar!/java/lang/NumberFormatException.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -276,20 +379,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/at/ac/uibk/dps/cloud/simulator/dissect-cf/1.0.2-SNAPSHOT/dissect-cf-1.0.2-SNAPSHOT-sources.jar!/hu/mta/sztaki/lpds/cloud/simulator/Timed.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="411" selection-start-line="411" selection-end-line="411" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/at/ac/uibk/dps/cloud/simulator/dissect-cf/1.0.2-SNAPSHOT/dissect-cf-1.0.2-SNAPSHOT-sources.jar!/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/NerualNetworkConsolidator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3420">
-          <caret line="192" column="34" selection-start-line="192" selection-start-column="34" selection-end-line="192" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/at/ac/uibk/dps/cloud/simulator/dissect-cf/1.0.2-SNAPSHOT/dissect-cf-1.0.2-SNAPSHOT-sources.jar!/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/NerualNetworkConsolidator.java" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -326,23 +416,156 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Trace.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/PIK-IPLEX.swf">
       <provider selected="true" editor-type-id="LargeFileEditor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/PIK-IPLEX.swf.converted">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-114" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/examples/MigrationModeling.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="60" column="13" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/at/ac/uibk/dps/cloud/simulator/dissect-cf/1.0.2-SNAPSHOT/dissect-cf-1.0.2-SNAPSHOT-sources.jar!/hu/mta/sztaki/lpds/cloud/simulator/iaas/consolidation/SimpleConsolidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="23" column="52" selection-start-line="23" selection-start-column="52" selection-end-line="23" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/at/ac/uibk/dps/cloud/simulator/dissect-cf/1.0.2-SNAPSHOT/dissect-cf-1.0.2-SNAPSHOT-sources.jar!/hu/mta/sztaki/lpds/cloud/simulator/iaas/resourcemodel/ResourceSpreader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="1064" selection-start-line="1064" selection-end-line="1064" />
+          <folding>
+            <element signature="e#38556#38557#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/at/ac/uibk/dps/cloud/simulator/dissect-cf/1.0.2-SNAPSHOT/dissect-cf-1.0.2-SNAPSHOT-sources.jar!/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/model/ModelPM.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3895">
+          <caret line="220" selection-start-line="220" selection-end-line="220" />
+          <folding>
+            <element signature="e#7514#7515#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/at/ac/uibk/dps/cloud/simulator/dissect-cf/1.0.2-SNAPSHOT/dissect-cf-1.0.2-SNAPSHOT-sources.jar!/hu/mta/sztaki/lpds/cloud/simulator/iaas/PhysicalMachine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17765">
+          <caret line="1011" selection-start-line="1011" selection-end-line="1011" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/at/ac/uibk/dps/cloud/simulator/dissect-cf/1.0.2-SNAPSHOT/dissect-cf-1.0.2-SNAPSHOT-sources.jar!/hu/mta/sztaki/lpds/cloud/simulator/iaas/constraints/AlterableResourceConstraints.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4218">
+          <caret line="246" selection-start-line="246" selection-end-line="246" />
+          <folding>
+            <element signature="e#8049#8050#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/at/ac/uibk/dps/cloud/simulator/dissect-cf/1.0.2-SNAPSHOT/dissect-cf-1.0.2-SNAPSHOT-sources.jar!/hu/mta/sztaki/lpds/cloud/simulator/iaas/VirtualMachine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22249">
+          <caret line="1226" selection-start-line="1226" selection-end-line="1226" />
+          <folding>
+            <element signature="e#43659#43660#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/at/ac/uibk/dps/cloud/simulator/dissect-cf/1.0.2-SNAPSHOT/dissect-cf-1.0.2-SNAPSHOT-sources.jar!/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/actions/Action.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1672">
+          <caret line="91" selection-start-line="91" selection-end-line="91" />
+          <folding>
+            <element signature="e#1993#1994#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Trace.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6">
+          <caret line="1488" column="41" lean-forward="true" selection-start-line="1488" selection-start-column="41" selection-end-line="1488" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/RICC-2010-2.swf.converted">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/at/ac/uibk/dps/cloud/simulator/dissect-cf/1.0.2-SNAPSHOT/dissect-cf-1.0.2-SNAPSHOT-sources.jar!/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/actions/MigrationAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="95" selection-start-line="95" selection-end-line="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/at/ac/uibk/dps/cloud/simulator/dissect-cf/1.0.2-SNAPSHOT/dissect-cf-1.0.2-SNAPSHOT-sources.jar!/hu/mta/sztaki/lpds/cloud/simulator/Timed.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="411" selection-start-line="411" selection-end-line="411" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/at/ac/uibk/dps/cloud/simulator/dissect-cf/1.0.2-SNAPSHOT/dissect-cf-1.0.2-SNAPSHOT-sources.jar!/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/ModelBasedConsolidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="87" column="34" selection-start-line="87" selection-start-column="34" selection-end-line="87" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/at/ac/uibk/dps/cloud/simulator/dissect-cf/1.0.2-SNAPSHOT/dissect-cf-1.0.2-SNAPSHOT-sources.jar!/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/model/InfrastructureModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/at/ac/uibk/dps/cloud/simulator/dissect-cf/1.0.2-SNAPSHOT/dissect-cf-1.0.2-SNAPSHOT-sources.jar!/hu/mta/sztaki/lpds/cloud/simulator/iaas/consolidation/Consolidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="111">
+          <caret line="47" column="32" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/at/ac/uibk/dps/cloud/simulator/dissect-cf/1.0.2-SNAPSHOT/dissect-cf-1.0.2-SNAPSHOT-sources.jar!/hu/mta/sztaki/lpds/cloud/simulator/iaas/IaaSService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1026">
+          <caret line="101" column="45" selection-start-line="101" selection-start-column="45" selection-end-line="101" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/at/ac/uibk/dps/cloud/simulator/dissect-cf/1.0.2-SNAPSHOT/dissect-cf-1.0.2-SNAPSHOT-sources.jar!/hu/mta/sztaki/lpds/cloud/simulator/iaas/vmconsolidation/NN/NeuralNetworkConsolidator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-856">
+          <caret line="33" column="30" selection-start-line="33" selection-start-column="30" selection-end-line="33" selection-end-column="30" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hu/mta/sztaki/lpds/cloud/simulator/examples/jobhistoryprocessor/JobDispatchingDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="417" column="12" selection-start-line="417" selection-start-column="12" selection-end-line="417" selection-end-column="12" />
+        <state relative-caret-position="291">
+          <caret line="425" column="53" lean-forward="true" selection-start-line="425" selection-start-column="53" selection-end-line="425" selection-end-column="53" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#8814#8827#0" expanded="true" />
-            <element signature="e#15551#15565#0" expanded="true" />
           </folding>
         </state>
       </provider>

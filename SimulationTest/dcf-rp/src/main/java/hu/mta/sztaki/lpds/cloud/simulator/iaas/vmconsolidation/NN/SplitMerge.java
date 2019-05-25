@@ -4,6 +4,8 @@ import hu.mta.sztaki.lpds.cloud.simulator.iaas.PhysicalMachine;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.model.InfrastructureModel;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Comparator;
 
 /**
  * This class is intended for dividing an InfrastructureModel
@@ -19,6 +21,15 @@ import java.util.ArrayList;
 
 public class SplitMerge {
 
+    final private static Comparator<PhysicalMachine> comparePMs = new Comparator<PhysicalMachine>() {
+        public int compare(final PhysicalMachine pm1, final PhysicalMachine pm2) {
+            return pm1.availableCapacities.compareTo(pm2.availableCapacities);
+        }
+    };
+
+    //Counter for Physical Machine ratio
+    Integer count;
+
     /**
      * The splitBefore function checks whether the PhysicalMachines
      * (that build the InfrastructureModel instance) can be divided
@@ -27,7 +38,7 @@ public class SplitMerge {
      * The InfrastructureModel is divided accordingly - an ArrayList of
      * InfrastructureModels is then returned.
      *
-     * @param toSplit
+     * @param toSplitBefore
      *            the InfrastructureModel being split up into smaller
      *            InfrastructureModels
      *
@@ -36,7 +47,40 @@ public class SplitMerge {
      *            InfrastructureModel
      */
 
-    public ArrayList<InfrastructureModel> splitBefore(InfrastructureModel toSplit, int split){
+    public ArrayList<InfrastructureModel> splitBefore(InfrastructureModel toSplitBefore, int split){
+
+        PhysicalMachine[] runningAtFront = new PhysicalMachine[toSplitBefore.bins.length];
+        //Adding running PhysicalMachines to the front
+        int counter = 0;
+        for(int i=0;i<toSplitBefore.bins.length;i++){
+            if(toSplitBefore.bins[i].getPM().isRunning()){
+                runningAtFront[counter] = toSplitBefore.bins[i].getPM();
+                counter++;
+            }
+        }
+        //Moving switched off PhysicalMachines to the back
+        for(int i=0;i<toSplitBefore.bins.length;i++){
+            if(!toSplitBefore.bins[i].getPM().isRunning()){
+                runningAtFront[counter] = toSplitBefore.bins[i].getPM();
+                counter++;
+            }
+        }
+
+        Arrays.sort(runningAtFront,comparePMs);
+
+
+        int counterLoop=0;
+        for(PhysicalMachine pm:runningAtFront) {
+            if ((pm.availableCapacities.getRequiredCPUs()!=pm.getCapacities().getRequiredCPUs())
+                    && (pm.availableCapacities.getRequiredMemory()!=pm.getCapacities().getRequiredMemory())){
+                    counterLoop++;
+            }
+        }
+        count = counterLoop;
+
+
+        InfrastructureModel toSplit = new InfrastructureModel(runningAtFront, 1, false, 1);
+
         if(split==1){
             //Individually split PhysicalMachines into separate InfrastructureModels
             return individualSplit(toSplit,split);
@@ -195,8 +239,9 @@ public class SplitMerge {
 
     public static InfrastructureModel mergeIMs(ArrayList<InfrastructureModel> splitIMs){
         InfrastructureModel[] x = splitIMs.toArray(new InfrastructureModel[splitIMs.size()]);
-         //Construct new InfrastructureModel
+        //Construct new InfrastructureModel
         InfrastructureModel merged = new InfrastructureModel(x);
+
         return merged;
     }
 }

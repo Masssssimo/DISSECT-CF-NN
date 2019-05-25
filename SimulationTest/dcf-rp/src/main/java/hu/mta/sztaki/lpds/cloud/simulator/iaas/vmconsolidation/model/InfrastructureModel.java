@@ -210,8 +210,7 @@ public class InfrastructureModel {
 			}
 		}
 
-
-
+		
 		calculateFitness();
 	}
 }

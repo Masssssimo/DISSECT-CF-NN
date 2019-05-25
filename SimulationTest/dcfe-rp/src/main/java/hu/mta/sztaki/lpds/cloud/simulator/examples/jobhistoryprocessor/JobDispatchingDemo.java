@@ -49,6 +49,7 @@ import hu.mta.sztaki.lpds.cloud.simulator.iaas.consolidation.SimpleConsolidator;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.pmscheduling.PhysicalMachineController;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.pmscheduling.SchedulingDependentMachines;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.NN.NeuralNetworkConsolidator;
+import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.NN.SplitMerge;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmscheduling.FirstFitScheduler;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmscheduling.Scheduler;
 import hu.mta.sztaki.lpds.cloud.simulator.io.Repository;
@@ -416,9 +417,16 @@ public class JobDispatchingDemo {
 
 		Object x = consolidators.get(0);
 		if(x instanceof NeuralNetworkConsolidator){
-			for(int i=0;i<((NeuralNetworkConsolidator) x).ratio.size();i++){
-				if(((NeuralNetworkConsolidator)x).ratio.get(i)!=0){
-					System.out.println("VMs Hosted = "+i+"\t Count = "+((NeuralNetworkConsolidator)x).ratio.get(i));
+			for(int i=0;i<((NeuralNetworkConsolidator) x).ratioVM.size();i++){
+				if(((NeuralNetworkConsolidator)x).ratioVM.get(i)!=0){
+					System.out.println("VMs Hosted = "+i+"\t Ratio = "+((NeuralNetworkConsolidator)x).ratioVM.get(i)+"/"+((NeuralNetworkConsolidator)x).functionCalls);
+				}
+			}
+			System.out.println("\nConsolidated 4 Off PMs = "+((NeuralNetworkConsolidator) x).offPMS+"/"+((NeuralNetworkConsolidator)x).functionCalls+"\n");
+			System.out.println("Entire Infrastructure\nRatio = (Count) / (Total amount of consolidation runs)");
+			for(int i=0;i<((NeuralNetworkConsolidator) x).ratioPM.size();i++){
+				if(((NeuralNetworkConsolidator)x).ratioPM.get(i)!=0){
+					System.out.println("PMs running = "+i+"\t Ratio = "+((NeuralNetworkConsolidator)x).ratioPM.get(i)+"/"+Consolidator.consolidationRuns);
 				}
 			}
 		}

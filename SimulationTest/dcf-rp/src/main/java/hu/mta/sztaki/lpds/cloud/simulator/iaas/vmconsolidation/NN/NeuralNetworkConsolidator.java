@@ -25,9 +25,15 @@ public class NeuralNetworkConsolidator extends ModelBasedConsolidator {
     // List of means for normalization
     private ArrayList<INDArray> mean = new ArrayList<>();
 
-    //Ratio of JobDispatchDemo
-    public ArrayList<Integer> ratio = new ArrayList<>();
+    //Virtual Machines requested
+    public ArrayList<Integer> ratioVM = new ArrayList<>();
+    //Physical Machines on
+    public ArrayList<Integer> ratioPM = new ArrayList<>();
 
+    //Off Physical Machine
+    public Integer offPMS = 0;
+
+    public Integer functionCalls = 0;
 
     // Building INDArray dimensions for NN input
     private Integer nRows = 1;
@@ -37,8 +43,9 @@ public class NeuralNetworkConsolidator extends ModelBasedConsolidator {
         super(toConsolidate, consFreq);
 
         //Initialise ratio ArrayList
-        for (int i = 0; i < 100000; i++) {
-            ratio.add(0);
+        for (int i = 0; i < 1000; i++) {
+            ratioVM.add(0);
+            ratioPM.add(0);
         }
 
         //Configuration initialization
@@ -210,11 +217,26 @@ public class NeuralNetworkConsolidator extends ModelBasedConsolidator {
         //Selecting what network
         Integer index = null;
 
-        if(ratio.get(sol.items.length)==null){
-            ratio.set(0,1);
-        }else{
-            ratio.set(sol.items.length,ratio.get(sol.items.length)+1);
+        //--------------------------------------------------------------------
+        // JOBDISPATCHINGDEM TEMP STATS COLLECTION
+        functionCalls++;
+        int offPMs = 0;
+        for(int j=0;j<input.bins.length;j++){
+            if(!input.bins[j].getPM().isRunning()){
+                offPMs++;
+            }
         }
+        if (offPMs==4){
+            offPMS++;
+        }
+
+
+        if(ratioVM.get(sol.items.length)==0){
+            ratioVM.set(sol.items.length,1);
+        }else{
+            ratioVM.set(sol.items.length, ratioVM.get(sol.items.length) + 1);
+        }
+        //--------------------------------------------------------------------
 
         switch (sol.items.length) {
             case 0:
@@ -362,6 +384,9 @@ public class NeuralNetworkConsolidator extends ModelBasedConsolidator {
         */
 
 
+        //Add PhysicalMachineCounter
+        ratioPM.set(sm.count,ratioPM.get(sm.count)+1);
+
         //Merge InfrastructureModel into one instance
         InfrastructureModel merged = sm.mergeIMs(consolidatedIMs);
 
@@ -373,7 +398,6 @@ public class NeuralNetworkConsolidator extends ModelBasedConsolidator {
 			}
 		}
          */
-
 
         return merged;
     }
