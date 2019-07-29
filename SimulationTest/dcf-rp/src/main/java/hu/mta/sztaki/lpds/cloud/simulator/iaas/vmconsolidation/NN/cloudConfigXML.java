@@ -1,7 +1,7 @@
 package hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.NN;
 
 
-public class configXML {
+public class cloudConfigXML {
     public static void main(String args[]){
         int amount = 4;
         int machineID = 1;

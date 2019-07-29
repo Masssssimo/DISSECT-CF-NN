@@ -50,42 +50,7 @@ public class NeuralNetworkConsolidator extends ModelBasedConsolidator {
 
     public NeuralNetworkConsolidator(final IaaSService toConsolidate, final long consFreq){
         super(toConsolidate, consFreq);
-        try {
-            PrintWriter writer2 = new PrintWriter("VM2.txt", "UTF-8");
-            PrintWriter writer3 = new PrintWriter("VM3.txt", "UTF-8");
-            PrintWriter writer4 = new PrintWriter("VM4.txt", "UTF-8");
-            PrintWriter writer5 = new PrintWriter("VM5.txt", "UTF-8");
-            PrintWriter writer6 = new PrintWriter("VM6.txt", "UTF-8");
-            PrintWriter writer7 = new PrintWriter("VM7.txt", "UTF-8");
-            PrintWriter writer8 = new PrintWriter("VM8.txt", "UTF-8");
-            PrintWriter writer9 = new PrintWriter("VM9.txt", "UTF-8");
-            PrintWriter writer10 = new PrintWriter("VM10.txt", "UTF-8");
-            PrintWriter writer11 = new PrintWriter("VM11.txt", "UTF-8");
-            PrintWriter writer12 = new PrintWriter("VM12.txt", "UTF-8");
-            PrintWriter writer13 = new PrintWriter("VM13.txt", "UTF-8");
-            PrintWriter writer14 = new PrintWriter("VM14.txt", "UTF-8");
-            PrintWriter writer15 = new PrintWriter("VM15.txt", "UTF-8");
-            PrintWriter writer16 = new PrintWriter("VM16.txt", "UTF-8");
 
-            Files.add(writer2);
-            Files.add(writer3);
-            Files.add(writer4);
-            Files.add(writer5);
-            Files.add(writer6);
-            Files.add(writer7);
-            Files.add(writer8);
-            Files.add(writer9);
-            Files.add(writer10);
-            Files.add(writer11);
-            Files.add(writer12);
-            Files.add(writer13);
-            Files.add(writer14);
-            Files.add(writer15);
-            Files.add(writer16);
-
-        }catch(Exception e){
-
-        }
         //Initialise ratio ArrayList
         for (int i = 0; i < 100000; i++) {
             ratioVM.add(0);

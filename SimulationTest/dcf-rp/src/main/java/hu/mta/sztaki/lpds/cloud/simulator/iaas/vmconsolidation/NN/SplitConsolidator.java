@@ -72,15 +72,22 @@ public class SplitConsolidator extends ModelBasedConsolidator{
 
         //Writing to files for data sets
         for(InfrastructureModel input: splitIMs) {
+
             StringBuilder data = new StringBuilder();
+
             for (int i = 0; i < input.items.length; i++) {
+
                 data.append(
                         input.items[i].getHostID() + "," + input.items[i].hashCode() + ",");
+
                 //Appending all VM's hosts
                 for (int j = 0; j < input.items.length; j++) {
-                    data.append(input.items[i].basedetails.vm.getResourceAllocation().allocated.getRequiredCPUs() + "," +
-                            input.items[i].basedetails.vm.getResourceAllocation().allocated.getRequiredMemory() + "," +
-                            input.items[i].getHostID());
+
+                    data.append(
+                            input.items[j].basedetails.vm.getResourceAllocation().allocated.getRequiredCPUs() + "," +
+                            input.items[j].basedetails.vm.getResourceAllocation().allocated.getRequiredMemory() + "," +
+                            input.items[j].getHostID());
+
                     if (j < input.items.length - 1) {
                         data.append(",");
                     } else {
@@ -88,7 +95,7 @@ public class SplitConsolidator extends ModelBasedConsolidator{
                     }
                 }
             }
-            if ((input.items.length <= 16) && (input.items.length > 1)) {
+            if ((input.items.length <= 11) && (input.items.length > 1)) {
                 Files.get(input.items.length - 2).println(data.toString());
                 Files.get(input.items.length - 2).flush();
             }
