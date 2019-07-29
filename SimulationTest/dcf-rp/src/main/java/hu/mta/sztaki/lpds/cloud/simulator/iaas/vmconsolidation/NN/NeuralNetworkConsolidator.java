@@ -14,6 +14,7 @@ import org.nd4j.linalg.dataset.api.preprocessor.stats.DistributionStats;
 import org.nd4j.linalg.factory.Nd4j;
 
 import java.io.File;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 public class NeuralNetworkConsolidator extends ModelBasedConsolidator {
@@ -35,15 +36,58 @@ public class NeuralNetworkConsolidator extends ModelBasedConsolidator {
 
     public Integer functionCalls = 0;
 
+    //Before and After optimization did not match
+    public Integer matchIMs = 0;
+
     // Building INDArray dimensions for NN input
     private Integer nRows = 1;
     private ArrayList<Integer> nColumns = new ArrayList<>();
 
-    public NeuralNetworkConsolidator(final IaaSService toConsolidate, final long consFreq) {
-        super(toConsolidate, consFreq);
+    //Files to write to
+    ArrayList<PrintWriter> Files = new ArrayList<>();
+    //Function calls counter
+    Integer callsCounter=0;
 
+    public NeuralNetworkConsolidator(final IaaSService toConsolidate, final long consFreq){
+        super(toConsolidate, consFreq);
+        try {
+            PrintWriter writer2 = new PrintWriter("VM2.txt", "UTF-8");
+            PrintWriter writer3 = new PrintWriter("VM3.txt", "UTF-8");
+            PrintWriter writer4 = new PrintWriter("VM4.txt", "UTF-8");
+            PrintWriter writer5 = new PrintWriter("VM5.txt", "UTF-8");
+            PrintWriter writer6 = new PrintWriter("VM6.txt", "UTF-8");
+            PrintWriter writer7 = new PrintWriter("VM7.txt", "UTF-8");
+            PrintWriter writer8 = new PrintWriter("VM8.txt", "UTF-8");
+            PrintWriter writer9 = new PrintWriter("VM9.txt", "UTF-8");
+            PrintWriter writer10 = new PrintWriter("VM10.txt", "UTF-8");
+            PrintWriter writer11 = new PrintWriter("VM11.txt", "UTF-8");
+            PrintWriter writer12 = new PrintWriter("VM12.txt", "UTF-8");
+            PrintWriter writer13 = new PrintWriter("VM13.txt", "UTF-8");
+            PrintWriter writer14 = new PrintWriter("VM14.txt", "UTF-8");
+            PrintWriter writer15 = new PrintWriter("VM15.txt", "UTF-8");
+            PrintWriter writer16 = new PrintWriter("VM16.txt", "UTF-8");
+
+            Files.add(writer2);
+            Files.add(writer3);
+            Files.add(writer4);
+            Files.add(writer5);
+            Files.add(writer6);
+            Files.add(writer7);
+            Files.add(writer8);
+            Files.add(writer9);
+            Files.add(writer10);
+            Files.add(writer11);
+            Files.add(writer12);
+            Files.add(writer13);
+            Files.add(writer14);
+            Files.add(writer15);
+            Files.add(writer16);
+
+        }catch(Exception e){
+
+        }
         //Initialise ratio ArrayList
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 100000; i++) {
             ratioVM.add(0);
             ratioPM.add(0);
         }
@@ -64,7 +108,7 @@ public class NeuralNetworkConsolidator extends ModelBasedConsolidator {
             mean.add(mean1);
 
             //Add network for 2 VM
-            File modelVM2 = new File("src/main/resources/VM-2-NN.zip");
+            File modelVM2 = new File("src/main/resources/VM-2-Layers-8.zip");
             MultiLayerNetwork networkVM2 = ModelSerializer.restoreMultiLayerNetwork(modelVM2);
             networks.add(networkVM2);
             // Set columns amount
@@ -77,7 +121,7 @@ public class NeuralNetworkConsolidator extends ModelBasedConsolidator {
             mean.add(mean2);
 
             //Add network for 3 VM
-            File modelVM3 = new File("src/main/resources/VM-3-NN.zip");
+            File modelVM3 = new File("src/main/resources/VM-3-Layers-8.zip");
             MultiLayerNetwork networkVM3 = ModelSerializer.restoreMultiLayerNetwork(modelVM3);
             networks.add(networkVM3);
             // Set columns amount
@@ -90,7 +134,7 @@ public class NeuralNetworkConsolidator extends ModelBasedConsolidator {
             mean.add(mean3);
 
             //Add network for 4 VM
-            File modelVM4 = new File("src/main/resources/VM-4-NN.zip");
+            File modelVM4 = new File("src/main/resources/VM-4-Layers-8-(itter 50).zip");
             MultiLayerNetwork networkVM4 = ModelSerializer.restoreMultiLayerNetwork(modelVM4);
             networks.add(networkVM4);
             // Set columns amount
@@ -103,7 +147,7 @@ public class NeuralNetworkConsolidator extends ModelBasedConsolidator {
             mean.add(mean4);
 
             //Add network for 5 VM
-            File modelVM5 = new File("src/main/resources/VM-5-NN.zip");
+            File modelVM5 = new File("src/main/resources/VM-5-Layers-8.zip");
             MultiLayerNetwork networkVM5 = ModelSerializer.restoreMultiLayerNetwork(modelVM5);
             networks.add(networkVM5);
             // Set columns amount
@@ -116,7 +160,7 @@ public class NeuralNetworkConsolidator extends ModelBasedConsolidator {
             mean.add(mean5);
 
             //Add network for 6 VM
-            File modelVM6 = new File("src/main/resources/VM-6-NN.zip");
+            File modelVM6 = new File("src/main/resources/VM-6-Layers-8.zip");
             MultiLayerNetwork networkVM6 = ModelSerializer.restoreMultiLayerNetwork(modelVM6);
             networks.add(networkVM6);
             // Set columns amount
@@ -129,7 +173,7 @@ public class NeuralNetworkConsolidator extends ModelBasedConsolidator {
             mean.add(mean6);
 
             //Add network for 7 VM
-            File modelVM7 = new File("src/main/resources/VM-7-NN.zip");
+            File modelVM7 = new File("src/main/resources/VM-7-Layers-8.zip");
             MultiLayerNetwork networkVM7 = ModelSerializer.restoreMultiLayerNetwork(modelVM7);
             networks.add(networkVM7);
             // Set columns amount
@@ -142,7 +186,7 @@ public class NeuralNetworkConsolidator extends ModelBasedConsolidator {
             mean.add(mean7);
 
             //Add network for 8 VM
-            File modelVM8 = new File("src/main/resources/VM-8-NN.zip");
+            File modelVM8 = new File("src/main/resources/VM-8-Layers-8.zip");
             MultiLayerNetwork networkVM8 = ModelSerializer.restoreMultiLayerNetwork(modelVM8);
             networks.add(networkVM8);
             // Set columns amount
@@ -155,7 +199,7 @@ public class NeuralNetworkConsolidator extends ModelBasedConsolidator {
             mean.add(mean8);
 
             //Add network for 9 VM
-            File modelVM9 = new File("src/main/resources/VM-9-NN.zip");
+            File modelVM9 = new File("src/main/resources/VM-9-Layers-8.zip");
             MultiLayerNetwork networkVM9 = ModelSerializer.restoreMultiLayerNetwork(modelVM9);
             networks.add(networkVM9);
             // Set columns amount
@@ -168,7 +212,7 @@ public class NeuralNetworkConsolidator extends ModelBasedConsolidator {
             mean.add(mean9);
 
             //Add network for 10 VM
-            File modelVM10 = new File("src/main/resources/VM-10-NN.zip");
+            File modelVM10 = new File("src/main/resources/VM-10-Layers-8.zip");
             MultiLayerNetwork networkVM10 = ModelSerializer.restoreMultiLayerNetwork(modelVM10);
             networks.add(networkVM10);
             // Set columns amount
@@ -181,7 +225,7 @@ public class NeuralNetworkConsolidator extends ModelBasedConsolidator {
             mean.add(mean10);
 
             //Add network for 11 VM
-            File modelVM11 = new File("src/main/resources/VM-11-NN.zip");
+            File modelVM11 = new File("src/main/resources/VM-11-Layers-8.zip");
             MultiLayerNetwork networkVM11 = ModelSerializer.restoreMultiLayerNetwork(modelVM11);
             networks.add(networkVM11);
             // Set columns amount
@@ -204,11 +248,54 @@ public class NeuralNetworkConsolidator extends ModelBasedConsolidator {
     }
 
     @Override
-    public InfrastructureModel optimize(final InfrastructureModel input) {
+    public InfrastructureModel optimize(final InfrastructureModel input){
         if(input.bins.length>4){
             return consolidateSplit(input);
         }else{
             return consolidate(input);
+        }
+    }
+
+    private void generateDataset(InfrastructureModel toOptimize){
+        StringBuilder dataBefore = new StringBuilder();
+        for (int i = 0; i < toOptimize.items.length; i++) {
+            dataBefore.append(
+                    toOptimize.items[i].getHostID() + "," + toOptimize.items[i].hashCode() + ",");
+            //Appending all VM's hosts
+            for (int j = 0; j < toOptimize.items.length; j++) {
+                dataBefore.append(toOptimize.items[i].basedetails.vm.getResourceAllocation().allocated.getRequiredCPUs() + "," +
+                        toOptimize.items[i].basedetails.vm.getResourceAllocation().allocated.getRequiredMemory() + "," +
+                        toOptimize.items[i].getHostID());
+                if(j<toOptimize.items.length-1){
+                    dataBefore.append(",");
+                }else{
+                    dataBefore.append("\n");
+                }
+            }
+        }
+
+        //Creates object of DataSetGeneratorNN
+        DataSetGeneratorNN generate = new DataSetGeneratorNN();
+        //Calculates each permutations of the given InfrastructureModel using recursion
+        generate.permuteIM(toOptimize);
+        //Builds the string representations of permutations as models
+        for(String s:generate.permutations)generate.buildModel(s,toOptimize);
+        //Creates a copy for the comparison
+        generate.listIMcopy.addAll(generate.listIM);
+        //Recursively removes each "non-optimal" mappings
+        generate.optimalPerm(generate.listIMcopy, toOptimize);
+        //Prints out result
+        String result = generate.dataSetRow();
+
+        if(!result.equals(dataBefore.toString())){
+            System.out.println(dataBefore);
+            System.out.println();
+            System.out.println(result);
+        }else{
+            matchIMs++;
+            if(matchIMs%1000==0){
+                System.out.print(matchIMs);
+            }
         }
     }
 
@@ -350,7 +437,34 @@ public class NeuralNetworkConsolidator extends ModelBasedConsolidator {
         //Split and Merge object for splitting the IaaSService
         SplitMerge sm = new SplitMerge();
         //Splitting the IaaSService
-        ArrayList<InfrastructureModel> splitIMs = sm.splitBefore(toConsolidate,4);
+        ArrayList<InfrastructureModel> splitIMs = sm.splitBefore(toConsolidate, 4);
+
+        //Checking how many function calls
+        callsCounter++;
+
+        //Writing to files for data sets
+        for(InfrastructureModel input: splitIMs) {
+            StringBuilder data = new StringBuilder();
+            for (int i = 0; i < input.items.length; i++) {
+                data.append(
+                        input.items[i].getHostID() + "," + input.items[i].hashCode() + ",");
+                //Appending all VM's hosts
+                for (int j = 0; j < input.items.length; j++) {
+                    data.append(input.items[i].basedetails.vm.getResourceAllocation().allocated.getRequiredCPUs() + "," +
+                            input.items[i].basedetails.vm.getResourceAllocation().allocated.getRequiredMemory() + "," +
+                            input.items[i].getHostID());
+                    if (j < input.items.length - 1) {
+                        data.append(",");
+                    } else {
+                        data.append("\n");
+                    }
+                }
+            }
+            if ((input.items.length <= 16) && (input.items.length > 1)) {
+                Files.get(input.items.length - 2).println(data.toString());
+                Files.get(input.items.length - 2).flush();
+            }
+        }
 
         //Checking mapping before consolidation
         /*
@@ -361,8 +475,7 @@ public class NeuralNetworkConsolidator extends ModelBasedConsolidator {
 				}
 			}
 		}
-        */
-
+         */
 
         //Consolidated split infrastructureModels
         ArrayList<InfrastructureModel> consolidatedIMs = new ArrayList<>();
@@ -371,7 +484,7 @@ public class NeuralNetworkConsolidator extends ModelBasedConsolidator {
         for(int i=0;i<splitIMs.size();i++){
             consolidatedIMs.add(optimize(splitIMs.get(i)));
         }
-
+        System.out.println("#Hit-after-networkOptimization");
         //Check mapping after consolidation
         /*
         for(int j=0;j<consolidatedIMs.size();j++){
@@ -381,15 +494,14 @@ public class NeuralNetworkConsolidator extends ModelBasedConsolidator {
                 }
             }
         }
-        */
-
+         */
 
         //Add PhysicalMachineCounter
         ratioPM.set(sm.count,ratioPM.get(sm.count)+1);
 
         //Merge InfrastructureModel into one instance
         InfrastructureModel merged = sm.mergeIMs(consolidatedIMs);
-
+        System.out.println("#Hit-after-merged");
         //Checking mapping after merge
         /*
 		for(int i=0;i<merged.bins.length;i++){

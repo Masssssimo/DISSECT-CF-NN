@@ -4,7 +4,6 @@ import hu.mta.sztaki.lpds.cloud.simulator.iaas.PhysicalMachine;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.model.InfrastructureModel;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Comparator;
 
 /**
@@ -48,83 +47,52 @@ public class SplitMerge {
      */
 
     public ArrayList<InfrastructureModel> splitBefore(InfrastructureModel toSplitBefore, int split){
+        /*Capacities printout before sort
+        for(int i=0;i<toSplitBefore.bins.length;i++){
+            System.out.println(toSplitBefore.bins[i].getPM().freeCapacities);
+        }
+         */
 
         PhysicalMachine[] runningAtFront = new PhysicalMachine[toSplitBefore.bins.length];
+        //Adding running Physical Machines to front
+        int front = 0;
+        int back = toSplitBefore.bins.length-1;
+        //Moving switched off PhysicalMachines to the back
         //Adding running PhysicalMachines to the front
-        int counter = 0;
         for(int i=0;i<toSplitBefore.bins.length;i++){
             if(toSplitBefore.bins[i].getPM().isRunning()){
-                runningAtFront[counter] = toSplitBefore.bins[i].getPM();
-                counter++;
-            }
-        }
-        //Moving switched off PhysicalMachines to the back
-        for(int i=0;i<toSplitBefore.bins.length;i++){
-            if(!toSplitBefore.bins[i].getPM().isRunning()){
-                runningAtFront[counter] = toSplitBefore.bins[i].getPM();
-                counter++;
+                runningAtFront[front] = toSplitBefore.bins[i].getPM();
+                front++;
+            }else{
+                runningAtFront[back] = toSplitBefore.bins[i].getPM();
+                back--;
             }
         }
 
-        Arrays.sort(runningAtFront,comparePMs);
 
+        count=front;
 
-        int counterLoop=0;
-        for(PhysicalMachine pm:runningAtFront) {
-            if ((pm.availableCapacities.getRequiredCPUs()!=pm.getCapacities().getRequiredCPUs())
-                    && (pm.availableCapacities.getRequiredMemory()!=pm.getCapacities().getRequiredMemory())){
-                    counterLoop++;
-            }
+        //Arrays.sort(runningAtFront,0,front,comparePMs);
+
+        // Capacities printout after sort
+        /*
+        System.out.println();
+        for(int i=0;i<runningAtFront.length;i++){
+                System.out.println(runningAtFront[i].freeCapacities);
         }
-        count = counterLoop;
+         */
 
-
-        InfrastructureModel toSplit = new InfrastructureModel(runningAtFront, 1, false, 1);
-
-        if(split==1){
-            //Individually split PhysicalMachines into separate InfrastructureModels
-            return individualSplit(toSplit,split);
-        }else if(toSplit.bins.length%split==0) {
+        if (split == 1) {
+            throw new RuntimeException("Individual Split");
+        } else if (runningAtFront.length % split == 0) {
             //Infrastructure split evenly
-            return evenSplit(toSplit, split);
+            return evenSplit(runningAtFront, split);
         }
         //Infrastructure cannot be evenly split - there is a remainder
-        return remainderSplit(toSplit,split);
+        //return remainderSplit(runningAtFront, split);
+        return null;
     }
 
-    /**
-     * The individualSplit function divides the PhysicalMachines (that
-     * build the InfrastructureModel instance toSplit) into individual
-     * InfrastructureModels.
-     *
-     * An ArrayList of each PhysicalMachine as an InfrastructureModel
-     * is returned.
-     *
-     * @param toSplit
-     *            the InfrastructureModel being split up into smaller
-     *            InfrastructureModels
-     *
-     * @param split
-     *            the amount of PhysicalMachines that construct each
-     *            InfrastructureModel (i.e. this value is always 1 as
-     *            each PhysicalMachine instance constructs an individual
-     *            InfrastructureModel)
-     */
-
-    private ArrayList<InfrastructureModel> individualSplit(InfrastructureModel toSplit, int split){
-        //Split up InfrastructureModel individually
-        ArrayList<InfrastructureModel> splitIMs = new ArrayList<>();
-        for(int i=0;i<toSplit.bins.length;i+=split){
-            ArrayList<PhysicalMachine> splitPMs = new ArrayList<>();
-            //Split each PhysicalMachine into an InfrastructureModel
-            splitPMs.add(toSplit.bins[i].getPM());
-            //Convert ArrayList to Array to construct Infrastructure Model
-            PhysicalMachine[] convert = splitPMs.toArray(new PhysicalMachine[splitPMs.size()]);
-            InfrastructureModel x = new InfrastructureModel(convert, 1, false, 1);
-            splitIMs.add(x);
-        }
-        return splitIMs;
-    }
 
     /**
      * The evenSplit function divides the PhysicalMachines (that build
@@ -145,13 +113,13 @@ public class SplitMerge {
      *            InfrastructureModel
      */
 
-    private ArrayList<InfrastructureModel> evenSplit(InfrastructureModel toSplit, int split){
+    private ArrayList<InfrastructureModel> evenSplit(PhysicalMachine[] toSplit, int split){
         //Split up InfrastructureModel into segments
         ArrayList<InfrastructureModel> splitIMs = new ArrayList<>();
-        for(int i=0;i<toSplit.bins.length;i+=split){
+        for(int i=0;i<toSplit.length;i+=split){
             ArrayList<PhysicalMachine> splitPMs = new ArrayList<>();
             for(int j=0;j<split;j++){
-                splitPMs.add(toSplit.bins[i+j].getPM());
+                splitPMs.add(toSplit[i+j]);
             }
             //Convert ArrayList to Array to construct Infrastructure Model
             PhysicalMachine[] convert = splitPMs.toArray(new PhysicalMachine[splitPMs.size()]);
@@ -220,7 +188,6 @@ public class SplitMerge {
                 PhysicalMachine[] convert = splitPMs.toArray(new PhysicalMachine[splitPMs.size()]);
                 InfrastructureModel x = new InfrastructureModel(convert, 1, false, 1);
                 splitIMs.add(x);
-
             }
         }
         return splitIMs;

@@ -3,7 +3,7 @@ Configuration:
 VM-OPTIONS:
 
 // Neural Network 
--Dhu.mta.sztaki.lpds.cloud.simulator.examples.consolidator=hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.NN.NerualNetworkConsolidator
+-Dhu.mta.sztaki.lpds.cloud.simulator.examples.consolidator=hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.NN.NeuralNetworkConsolidator
 
 
 // FirstFit Consolidator

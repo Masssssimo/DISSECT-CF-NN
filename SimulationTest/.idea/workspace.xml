@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7b43a71f-9af1-42bc-aacb-cb1fb3bdcab4" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ProjectId" id="1OZIyDUNrplJglxPBtbby1awVpQ" />
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/dcfe-rp" />
+    <property name="settings.editor.selected.configurable" value="project.propCompiler" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.SplitCon100kJobs(PIK-IPLEX)">
+    <configuration name="FF10kJobs(sharcnet.gwf)" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="hu.mta.sztaki.lpds.cloud.simulator.examples.jobhistoryprocessor.JobDispatchingDemo" />
+      <module name="dissect-cf-examples" />
+      <option name="PROGRAM_PARAMETERS" value="sharcnet.gwf 10000 Automated-4000.xml 60000" />
+      <option name="VM_PARAMETERS" value="-Dhu.mta.sztaki.lpds.cloud.simulator.examples.consolidator=hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.simple.FirstFitConsolidator" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dcfe-rp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SplitCon100kJobs(PIK-IPLEX)" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="hu.mta.sztaki.lpds.cloud.simulator.examples.jobhistoryprocessor.JobDispatchingDemo" />
+      <module name="dissect-cf-examples" />
+      <option name="PROGRAM_PARAMETERS" value="PIK-IPLEX.swf 100000 Automated-4000.xml 60000" />
+      <option name="VM_PARAMETERS" value="-Dhu.mta.sztaki.lpds.cloud.simulator.examples.consolidator=hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.NN.SplitConsolidator" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dcfe-rp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SplitCon10kJobs(sharcnet.gwf)" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="hu.mta.sztaki.lpds.cloud.simulator.examples.jobhistoryprocessor.JobDispatchingDemo" />
+      <module name="dissect-cf-examples" />
+      <option name="PROGRAM_PARAMETERS" value="sharcnet.gwf 10000 Automated-4000.xml 60000" />
+      <option name="VM_PARAMETERS" value="-Dhu.mta.sztaki.lpds.cloud.simulator.examples.consolidator=hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.NN.SplitConsolidator" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dcfe-rp" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.FF10kJobs(sharcnet.gwf)" />
+      <item itemvalue="Application.SplitCon10kJobs(sharcnet.gwf)" />
+      <item itemvalue="Application.SplitCon100kJobs(PIK-IPLEX)" />
+    </list>
+  </component>
+</project>

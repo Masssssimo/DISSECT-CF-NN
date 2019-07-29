@@ -6,7 +6,6 @@ import hu.mta.sztaki.lpds.cloud.simulator.iaas.PhysicalMachine;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.constraints.ConstantConstraints;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.model.GenHelper;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.model.InfrastructureModel;
-import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.model.ModelPM;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.model.improver.NonImprover;
 import hu.mta.sztaki.lpds.cloud.simulator.io.VirtualAppliance;
 import hu.mta.sztaki.lpds.cloud.simulator.util.CloudLoader;
@@ -19,16 +18,16 @@ public class DataSetGeneratorNN {
 
     private static InfrastructureModel IM;
     //  List of all permutations
-    private static ArrayList<String> permutations = new ArrayList<>();
+    public ArrayList<String> permutations = new ArrayList<>();
     //  List of all IM's
-    private static ArrayList<InfrastructureModel> listIM = new ArrayList<>();
+    public ArrayList<InfrastructureModel> listIM = new ArrayList<>();
     //  List of all IM's
-    private static ArrayList<InfrastructureModel> listIMcopy = new ArrayList<>();
+    public ArrayList<InfrastructureModel> listIMcopy = new ArrayList<>();
     //  List of optimal permutations
-    private static ArrayList<InfrastructureModel> optIM = new ArrayList<>();
+    public ArrayList<InfrastructureModel> optIM = new ArrayList<>();
 
     //Amount of VM's & PM's
-    private static int amountVM = 10;
+    private static int amountVM = 7;
     private static int amountPM = 4;
 
     public static void main(String args[]) throws Exception{
@@ -46,8 +45,52 @@ public class DataSetGeneratorNN {
         Timed.simulateUntilLastEvent();
         VirtualAppliance va = new VirtualAppliance("BASE-VA", 1000, 0, false, 10000l);
         cloud.repositories.get(0).registerObject(va);
-        ConstantConstraints minCaps = new ConstantConstraints(1.8, 0.001, true, 9999999999L);
-        cloud.requestVM(va, minCaps, cloud.repositories.get(0), amountVM);
+
+        //Generate random constraints values
+        //Random CPU Range
+        double minCPU = 0.00000001;
+        double maxCPU = 4.0;
+        double randomCPU = ThreadLocalRandom.current().nextDouble(minCPU, maxCPU);
+        double randomCPU1 = ThreadLocalRandom.current().nextDouble(minCPU, maxCPU);
+        double randomCPU2 = ThreadLocalRandom.current().nextDouble(minCPU, maxCPU);
+        double randomCPU3 = ThreadLocalRandom.current().nextDouble(minCPU, maxCPU);
+        double randomCPU4 = ThreadLocalRandom.current().nextDouble(minCPU, maxCPU);
+
+
+        //Random Memory Range
+        long minMEM = 1;
+        long maxMEM = 999999999;
+        long randomMEM = ThreadLocalRandom.current().nextLong(minMEM, maxMEM);
+        long randomMEM1 = ThreadLocalRandom.current().nextLong(minMEM, maxMEM);
+        long randomMEM2 = ThreadLocalRandom.current().nextLong(minMEM, maxMEM);
+        long randomMEM3 = ThreadLocalRandom.current().nextLong(minMEM, maxMEM);
+        long randomMEM4 = ThreadLocalRandom.current().nextLong(minMEM, maxMEM);
+
+        //Create Random constraints
+        ConstantConstraints minCaps = new ConstantConstraints(randomCPU, 0.001, true, randomMEM);
+        ConstantConstraints minCaps1 = new ConstantConstraints(randomCPU1, 0.001, true, randomMEM1);
+        ConstantConstraints minCaps2 = new ConstantConstraints(randomCPU2, 0.001, true, randomMEM2);
+        ConstantConstraints minCaps3 = new ConstantConstraints(randomCPU3, 0.001, true, randomMEM3);
+        ConstantConstraints minCaps4 = new ConstantConstraints(randomCPU4, 0.001, true, randomMEM4);
+
+        //Random amount of virutl machines
+        Integer VMAmount = ThreadLocalRandom.current().nextInt(1, 10);
+        Integer VMAmount1 = ThreadLocalRandom.current().nextInt(1, 10);
+        Integer VMAmount2 = ThreadLocalRandom.current().nextInt(1, 10);
+        Integer VMAmount3 = ThreadLocalRandom.current().nextInt(1, 10);
+        Integer VMAmount4 = ThreadLocalRandom.current().nextInt(1, 10);
+
+
+
+        //ConstantConstraints minCaps = new ConstantConstraints(2.5,0.001, true, 9999999999L);
+
+        cloud.requestVM(va, minCaps, cloud.repositories.get(0), 4);
+        /*
+        cloud.requestVM(va, minCaps1, cloud.repositories.get(0), VMAmount1);
+        cloud.requestVM(va, minCaps2, cloud.repositories.get(0), VMAmount2);
+        cloud.requestVM(va, minCaps3, cloud.repositories.get(0), VMAmount3);
+        cloud.requestVM(va, minCaps4, cloud.repositories.get(0), VMAmount4);
+         */
         Timed.simulateUntilLastEvent();
 
         IM = new InfrastructureModel(cloud.machines.toArray(new PhysicalMachine[0]), 1, false, 1);
@@ -112,7 +155,7 @@ public class DataSetGeneratorNN {
 
 
     }
-
+    /*
     private static void generate() throws Exception {
         File xml = new File("/home/mike/DISSECT-CF-NN/dcf-rp/config.xml");
 
@@ -167,19 +210,20 @@ public class DataSetGeneratorNN {
         //Printing the row
         dataSetRow();
     }
+     */
 
-    private static void permuteManual(int amountVM,int amountPM){
+    public void permuteManual(int amountVM,int amountPM){
         //Exhaustively search all permutations
         permuteHelper(amountVM,amountPM+1,"");
     }
 
 
-    private static void permuteIM(InfrastructureModel IM) {
+    public void permuteIM(InfrastructureModel IM) {
         //Recursively create all permutations
         permuteHelper(IM.items.length, IM.bins.length + 1, "");
     }
 
-    private static void permuteHelper(int amountVM, int amountPM, String output) {
+    public void permuteHelper(int amountVM, int amountPM, String output) {
         if (amountVM == 0) {
             permutations.add(output);
         } else {
@@ -190,8 +234,8 @@ public class DataSetGeneratorNN {
         }
     }
 
-    private static void buildModel(String perm){
-        InfrastructureModel x = new InfrastructureModel(IM, new GenHelper() {
+    public void buildModel(String perm,InfrastructureModel modelToCopy){
+        InfrastructureModel x = new InfrastructureModel(modelToCopy, new GenHelper() {
 
             @Override
             public boolean shouldUseDifferent() {
@@ -207,7 +251,7 @@ public class DataSetGeneratorNN {
         listIM.add(x);
     }
 
-    private static void optimalPerm(ArrayList<InfrastructureModel> list, InfrastructureModel currentBest) {
+    public void optimalPerm(ArrayList<InfrastructureModel> list, InfrastructureModel currentBest) {
         //Calculate the optimal permutations
         list.removeIf(x -> currentBest.isBetterThan(x));
         InfrastructureModel check = null;
@@ -222,7 +266,7 @@ public class DataSetGeneratorNN {
     }
 
 
-    private static void dataSetRow() {
+    public String dataSetRow() {
         //Select Random Mapping
         int minRandMap = 0;
         int randMap;
@@ -232,6 +276,7 @@ public class DataSetGeneratorNN {
             randMap = 0;
 
         if(!optIM.isEmpty()) {
+
             StringBuilder data = new StringBuilder();
             for (int i = 0; i < optIM.get(randMap).items.length; i++) {
                 //Format of data
@@ -245,27 +290,22 @@ public class DataSetGeneratorNN {
                 //PM-n-HOSTING-AMOUNT
 
                 data.append(
-                        optIM.get(randMap).items[i].getHostID() + "," +
-                                optIM.get(randMap).items[i].hashCode() + "," +
-                                optIM.get(randMap).items[i].basedetails.vm.getResourceAllocation().allocated.getRequiredCPUs() + "," +
-                                optIM.get(randMap).items[i].basedetails.vm.getResourceAllocation().allocated.getRequiredMemory() + "," +
-                                optIM.get(randMap).items[i].basedetails.vm.getResourceAllocation().allocated.getRequiredProcessingPower() + ",");
+                        optIM.get(randMap).items[i].getHostID() + "," + optIM.get(randMap).items[i].hashCode() + ",");
                 //Appending all VM's hosts
                 for (int j = 0; j < optIM.get(randMap).items.length; j++) {
-                    data.append(optIM.get(randMap).items[j].getHostID() + ",");
-                }
-                //Appending all PM's hosting amount
-                for (int k = 0; k < optIM.get(randMap).bins.length; k++) {
-                    if (k == optIM.get(randMap).bins.length - 1) {
-                        data.append(optIM.get(randMap).bins[k].getVMs().size());
-                        break;
+                    data.append(optIM.get(randMap).items[i].basedetails.vm.getResourceAllocation().allocated.getRequiredCPUs() + "," +
+                            optIM.get(randMap).items[i].basedetails.vm.getResourceAllocation().allocated.getRequiredMemory() + "," +
+                            optIM.get(randMap).items[i].getHostID());
+                    if(j<optIM.get(randMap).items.length-1){
+                        data.append(",");
+                    }else{
+                        data.append("\n");
                     }
-                    data.append(optIM.get(randMap).bins[k].getVMs().size() + ",");
                 }
-                if (i < optIM.get(randMap).items.length) data.append('\n');
-
             }
-            System.out.print(data.toString());
+            return data.toString();
+        }else{
+            return "";
         }
     }
 
