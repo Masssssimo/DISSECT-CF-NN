@@ -32,7 +32,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SplitCon100kJobs(PIK-IPLEX)">
+  <component name="RunManager" selected="Application.cleanDataPIKIPLEX">
+    <configuration name="DataSetGeneratorNN" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.NN.DataSetGeneratorNN" />
+      <module name="dissect-cf" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.NN.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="FF10kJobs(sharcnet.gwf)" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="hu.mta.sztaki.lpds.cloud.simulator.examples.jobhistoryprocessor.JobDispatchingDemo" />
       <module name="dissect-cf-examples" />
@@ -95,10 +108,12 @@
       <item itemvalue="Application.SplitCon100kJobs(PIK-IPLEX)" />
       <item itemvalue="Application.cleanDataPIKIPLEX" />
       <item itemvalue="Application.cloudConfigXML" />
+      <item itemvalue="Application.DataSetGeneratorNN" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.cleanDataPIKIPLEX" />
+        <item itemvalue="Application.DataSetGeneratorNN" />
         <item itemvalue="Application.cloudConfigXML" />
       </list>
     </recent_temporary>

@@ -34,7 +34,7 @@ public class DataSetGeneratorNN {
 
         /**
          *  Cloud with 4 Physical Machine
-        */
+         */
         //File xml = new File("/home/mike/DISSECT-CF-NN/dcf-rp/config.xml");
 
         /**
@@ -214,13 +214,13 @@ public class DataSetGeneratorNN {
 
     public void permuteManual(int amountVM,int amountPM){
         //Exhaustively search all permutations
-        permuteHelper(amountVM,amountPM+1,"");
+        permuteHelper(amountVM,amountPM,"");
     }
 
 
     public void permuteIM(InfrastructureModel IM) {
         //Recursively create all permutations
-        permuteHelper(IM.items.length, IM.bins.length + 1, "");
+        permuteHelper(IM.items.length, IM.bins.length, "");
     }
 
     public void permuteHelper(int amountVM, int amountPM, String output) {
@@ -228,7 +228,7 @@ public class DataSetGeneratorNN {
             permutations.add(output);
         } else {
             //Loop through each PM and recursively calculate permutations
-            for (int i = 1; i < amountPM; i++) {
+            for (int i = 1; i < amountPM+1; i++) {
                 permuteHelper(amountVM - 1, amountPM, output + i);
             }
         }
@@ -244,7 +244,8 @@ public class DataSetGeneratorNN {
 
             @Override
             public int whatShouldWeUse(InfrastructureModel im, int vm) {
-                int pm = Integer.parseInt("" + perm.charAt(vm)) - 1;
+                int pm = Integer.parseInt("" + perm.charAt(vm)) -1;
+                //int pm = Integer.parseInt("" + perm.charAt(vm));
                 return pm;
             }
         }, NonImprover.singleton);
