@@ -10,6 +10,7 @@ import hu.mta.sztaki.lpds.cloud.simulator.util.CloudLoader;
 
 import java.io.File;
 import java.io.FileReader;
+import java.io.PrintWriter;
 import java.util.*;
 
 import static java.lang.Float.parseFloat;
@@ -22,7 +23,7 @@ public class cleanDataPIKIPLEX {
 
     public static void main(String args[]) throws Exception {
         try {
-            datasetRaw = new File("/home/mike/Data - VM Consolidation/Datasets (Uncleaned)/VM's-1 to16 (4000PMS-100KJobs) PIK-IPLEX/VM2.txt");
+            datasetRaw = new File("/home/mike/Data - VM Consolidation/Datasets (Uncleaned)/VM's-1 to16 (4000PMS-100KJobs) PIK-IPLEX/VM11.txt");
         }catch(Exception e){
             System.err.println(e);
         }
@@ -88,13 +89,14 @@ public class cleanDataPIKIPLEX {
 
     private static void createThenPermute(String[] uniqIMs) throws Exception{
         /**
-         1) Create cloud infrastructure with 16 physical machines
 
-         2) Create multidimensional array structured according to the uniqIMs[]
+         1) Create multidimensional array structured according to the uniqIMs[]
          e.g. for 2 VMs dataset:
          classification(targethost),vmidinquestion,vm0cpu,vm0mem,vm0host,vm1cpu,vm1mem,vm1host
 
-         3) Populate multidimensional array with unique configurations from uniqIMs[]
+         2) Populate multidimensional array with unique configurations from uniqIMs[]
+
+         3) Create cloud infrastructure with 16 physical machines
 
          4) Create an InfrastuctureModel for each unique configuration
 
@@ -107,7 +109,7 @@ public class cleanDataPIKIPLEX {
          4.4) Collect the optimal models results and append each via a String Builder
 
          5) Re-clean the optimal models using the previously defined functions
-         Therefore removing white-spaces and dupliate rows.
+         (i.e. removing white-spaces and duplicate rows).
          */
 
 
@@ -125,10 +127,10 @@ public class cleanDataPIKIPLEX {
         //Create an object of DataSetGeneratorNN
         DataSetGeneratorNN generate = new DataSetGeneratorNN();
         //Calculates each permutations of the given configurations recursively
-        generate.permuteHelper(2, 4, "");
+        generate.permuteHelper(11, 4, "");
         //File which contains the infrastructure set (i.e. nodes mapping to one another)
         File xml = new File("/home/mike/SimulationMLP/SimulationTest/dcf-rp/config-Automated.xml");
-        //This string builder stores the "cleaned" dataset
+        //This StringBuilder stores the "cleaned" dataset
         StringBuilder results = new StringBuilder();
 
         for(int j=0;j<rows;j++) {
@@ -178,6 +180,9 @@ public class cleanDataPIKIPLEX {
         //The cleaned results is the generated "optimal" configurations -  re-cleaned
         // (i.e. removed blank spaces and duplicate rows)
         String cleanedResults = String.join("\n", cleanDataset(results.toString()));
-        System.out.println(cleanedResults);
+        //Write results to a .txt file
+        PrintWriter writer = new PrintWriter("PIK-IPLEX-VM11-CleanedOptmizedDataset.txt", "UTF-8");
+        writer.println(cleanedResults);
+        writer.flush();
     }
 }
