@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7b43a71f-9af1-42bc-aacb-cb1fb3bdcab4" name="Default Changelist" comment="" />
+    <list default="true" id="397fdd2a-bfe2-4767-b33f-3da3f393be58" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,10 +15,17 @@
       </list>
     </option>
   </component>
-  <component name="ProjectId" id="1OZIyDUNrplJglxPBtbby1awVpQ" />
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="lookForNested" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1PfIIZT7h92q3Y3JnKxkfyAqEua" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$USER_HOME$/dl4j-examples" />
-    <property name="settings.editor.selected.configurable" value="Console" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/dcfe-rp" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -32,7 +39,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.cleanDataPIKIPLEX">
+  <component name="RunManager" selected="Application.readAndLoadPIKIPLEX">
     <configuration name="DataSetGeneratorNN" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.NN.DataSetGeneratorNN" />
       <module name="dissect-cf" />
@@ -46,51 +53,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FF10kJobs(sharcnet.gwf)" type="Application" factoryName="Application">
+    <configuration name="JobDispatchingDemo -  test" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="hu.mta.sztaki.lpds.cloud.simulator.examples.jobhistoryprocessor.JobDispatchingDemo" />
       <module name="dissect-cf-examples" />
-      <option name="PROGRAM_PARAMETERS" value="sharcnet.gwf 10000 Automated-4000.xml 60000" />
+      <option name="PROGRAM_PARAMETERS" value="PIK-IPLEX.swf 100 Automated-4000.xml 60000" />
       <option name="VM_PARAMETERS" value="-Dhu.mta.sztaki.lpds.cloud.simulator.examples.consolidator=hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.simple.FirstFitConsolidator" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dcfe-rp" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SplitCon100kJobs(PIK-IPLEX)" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="hu.mta.sztaki.lpds.cloud.simulator.examples.jobhistoryprocessor.JobDispatchingDemo" />
-      <module name="dissect-cf-examples" />
-      <option name="PROGRAM_PARAMETERS" value="PIK-IPLEX.swf 100000 Automated-4000.xml 60000" />
-      <option name="VM_PARAMETERS" value="-Dhu.mta.sztaki.lpds.cloud.simulator.examples.consolidator=hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.NN.SplitConsolidator" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dcfe-rp" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SplitCon10kJobs(sharcnet.gwf)" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="hu.mta.sztaki.lpds.cloud.simulator.examples.jobhistoryprocessor.JobDispatchingDemo" />
-      <module name="dissect-cf-examples" />
-      <option name="PROGRAM_PARAMETERS" value="sharcnet.gwf 10000 Automated-4000.xml 60000" />
-      <option name="VM_PARAMETERS" value="-Dhu.mta.sztaki.lpds.cloud.simulator.examples.consolidator=hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.NN.SplitConsolidator" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dcfe-rp" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="cleanDataPIKIPLEX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.NN.cleanDataPIKIPLEX" />
-      <module name="dissect-cf" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.NN.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="cloudConfigXML" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.NN.cloudConfigXML" />
+    <configuration name="readAndLoadPIKIPLEX" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.NN.readAndLoadPIKIPLEX" />
       <module name="dissect-cf" />
       <extension name="coverage">
         <pattern>
@@ -103,18 +77,14 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.FF10kJobs(sharcnet.gwf)" />
-      <item itemvalue="Application.SplitCon10kJobs(sharcnet.gwf)" />
-      <item itemvalue="Application.SplitCon100kJobs(PIK-IPLEX)" />
-      <item itemvalue="Application.cleanDataPIKIPLEX" />
-      <item itemvalue="Application.cloudConfigXML" />
+      <item itemvalue="Application.JobDispatchingDemo -  test" />
       <item itemvalue="Application.DataSetGeneratorNN" />
+      <item itemvalue="Application.readAndLoadPIKIPLEX" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.cleanDataPIKIPLEX" />
+        <item itemvalue="Application.readAndLoadPIKIPLEX" />
         <item itemvalue="Application.DataSetGeneratorNN" />
-        <item itemvalue="Application.cloudConfigXML" />
       </list>
     </recent_temporary>
   </component>

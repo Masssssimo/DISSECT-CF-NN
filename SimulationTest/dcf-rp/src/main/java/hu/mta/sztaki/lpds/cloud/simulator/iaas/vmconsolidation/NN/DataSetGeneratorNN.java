@@ -40,16 +40,17 @@ public class DataSetGeneratorNN {
         /**
          *  Cloud with 16 Physical Machine
          */
-        File xml = new File("/home/mike/SimulationMLP/SimulationTest/dcf-rp/config-Automated.xml");
-        IaaSService cloud = CloudLoader.loadNodes(xml.toString());
-        Timed.simulateUntilLastEvent();
-        VirtualAppliance va = new VirtualAppliance("BASE-VA", 1000, 0, false, 10000l);
-        cloud.repositories.get(0).registerObject(va);
+
 
         //Generate random constraints values
         //Random CPU Range
         double minCPU = 0.00000001;
         double maxCPU = 4.0;
+        File xml = new File("/home/mike/SimulationMLP/SimulationTest/dcf-rp/config-Automated.xml");
+        IaaSService cloud = CloudLoader.loadNodes(xml.toString());
+        Timed.simulateUntilLastEvent();
+        VirtualAppliance va = new VirtualAppliance("BASE-VA", 1000, 0, false, 10000l);
+        cloud.repositories.get(0).registerObject(va);
         double randomCPU = ThreadLocalRandom.current().nextDouble(minCPU, maxCPU);
         double randomCPU1 = ThreadLocalRandom.current().nextDouble(minCPU, maxCPU);
         double randomCPU2 = ThreadLocalRandom.current().nextDouble(minCPU, maxCPU);
