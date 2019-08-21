@@ -49,6 +49,7 @@ import hu.mta.sztaki.lpds.cloud.simulator.iaas.consolidation.SimpleConsolidator;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.pmscheduling.PhysicalMachineController;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.pmscheduling.SchedulingDependentMachines;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.NN.NeuralNetworkConsolidator;
+import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.NN.neuralNetworkPIKIPLEX;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmscheduling.FirstFitScheduler;
 import hu.mta.sztaki.lpds.cloud.simulator.iaas.vmscheduling.Scheduler;
 import hu.mta.sztaki.lpds.cloud.simulator.io.Repository;
@@ -415,6 +416,12 @@ public class JobDispatchingDemo {
 		System.err.println("Performance: " + (((double) vmcount) / duration) + " VMs/ms ");
 
 		Object x = consolidators.get(0);
+
+		if(x instanceof neuralNetworkPIKIPLEX){
+			System.out.println("Manual migration counter - "+((neuralNetworkPIKIPLEX) x).migrationCounter);
+		}
+
+
 		if(x instanceof NeuralNetworkConsolidator){
 			for(int i=0;i<((NeuralNetworkConsolidator) x).ratioVM.size();i++){
 				if(((NeuralNetworkConsolidator)x).ratioVM.get(i)!=0){

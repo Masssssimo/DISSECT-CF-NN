@@ -361,16 +361,14 @@ public class NeuralNetworkConsolidator extends ModelBasedConsolidator {
             // Adding VM Constraints
             data.put(0, 0, sol.items[i].hashCode());
 
-            int x = 0;
+            int x = 1;
             for (int j = 0; j < sol.items.length; j++) {
-                if (j != i) {
                     data.put(0, x, sol.items[j].basedetails.vm.getResourceAllocation().allocated.getRequiredCPUs());
                     x++;
                     data.put(0, x, sol.items[j].basedetails.vm.getResourceAllocation().allocated.getRequiredMemory());
                     x++;
                     data.put(0, x, sol.items[j].getHostID());
                     x++;
-                }
             }
 
             // Normalize Input

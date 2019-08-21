@@ -103,7 +103,7 @@ public abstract class ModelBasedConsolidator extends Consolidator {
 
 	private void loadProps() throws InvalidPropertiesFormatException, IOException {
 		props = new Properties();
-		final File file = new File("consolidationProperties.xml");
+		final File file = new File("/home/mike/SimulationMLP/SimulationTest/dcf-rp/consolidationProperties.xml");
 		final FileInputStream fileInput = new FileInputStream(file);
 		props.loadFromXML(fileInput);
 		fileInput.close();

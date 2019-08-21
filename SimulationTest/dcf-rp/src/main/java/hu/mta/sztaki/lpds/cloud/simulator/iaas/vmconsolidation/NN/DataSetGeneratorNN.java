@@ -40,13 +40,17 @@ public class DataSetGeneratorNN {
         /**
          *  Cloud with 16 Physical Machine
          */
+        File xml = new File("/home/mike/SimulationMLP/SimulationTest/dcf-rp/config-Automated.xml");
 
+        /**
+         *  Cloud with 4000 Physical Machine
+         */
+        //File xml = new File("/home/mike/Data - VM Consolidation/Automated-4000.xml");
 
         //Generate random constraints values
         //Random CPU Range
         double minCPU = 0.00000001;
         double maxCPU = 4.0;
-        File xml = new File("/home/mike/SimulationMLP/SimulationTest/dcf-rp/config-Automated.xml");
         IaaSService cloud = CloudLoader.loadNodes(xml.toString());
         Timed.simulateUntilLastEvent();
         VirtualAppliance va = new VirtualAppliance("BASE-VA", 1000, 0, false, 10000l);
@@ -85,7 +89,7 @@ public class DataSetGeneratorNN {
 
         //ConstantConstraints minCaps = new ConstantConstraints(2.5,0.001, true, 9999999999L);
 
-        cloud.requestVM(va, minCaps, cloud.repositories.get(0), 4);
+        cloud.requestVM(va, minCaps, cloud.repositories.get(0), 18);
         /*
         cloud.requestVM(va, minCaps1, cloud.repositories.get(0), VMAmount1);
         cloud.requestVM(va, minCaps2, cloud.repositories.get(0), VMAmount2);
@@ -97,8 +101,9 @@ public class DataSetGeneratorNN {
         IM = new InfrastructureModel(cloud.machines.toArray(new PhysicalMachine[0]), 1, false, 1);
 
         //Execute optimization
-        NeuralNetworkConsolidator consolidate = new NeuralNetworkConsolidator(cloud,0);
-        IM = consolidate.consolidateSplit(IM);
+        //NeuralNetworkConsolidator consolidate = new NeuralNetworkConsolidator(cloud,0);
+        neuralNetworkPIKIPLEX consolidate = new neuralNetworkPIKIPLEX(cloud,0);
+        IM = consolidate.optimize(IM);
 
         /*
         for(ModelPM PM : IM.bins){

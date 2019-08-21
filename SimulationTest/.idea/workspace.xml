@@ -39,7 +39,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.readAndLoadPIKIPLEX">
+  <component name="RunManager" selected="Application.JobDispatchingDemo -  test">
     <configuration name="DataSetGeneratorNN" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.NN.DataSetGeneratorNN" />
       <module name="dissect-cf" />
@@ -56,8 +56,8 @@
     <configuration name="JobDispatchingDemo -  test" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="hu.mta.sztaki.lpds.cloud.simulator.examples.jobhistoryprocessor.JobDispatchingDemo" />
       <module name="dissect-cf-examples" />
-      <option name="PROGRAM_PARAMETERS" value="PIK-IPLEX.swf 100 Automated-4000.xml 60000" />
-      <option name="VM_PARAMETERS" value="-Dhu.mta.sztaki.lpds.cloud.simulator.examples.consolidator=hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.simple.FirstFitConsolidator" />
+      <option name="PROGRAM_PARAMETERS" value="PIK-IPLEX.swf 1000 Automated-4000.xml 60000" />
+      <option name="VM_PARAMETERS" value="-Dhu.mta.sztaki.lpds.cloud.simulator.examples.consolidator=hu.mta.sztaki.lpds.cloud.simulator.iaas.vmconsolidation.NN.neuralNetworkPIKIPLEX" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/dcfe-rp" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -83,8 +83,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.readAndLoadPIKIPLEX" />
         <item itemvalue="Application.DataSetGeneratorNN" />
+        <item itemvalue="Application.readAndLoadPIKIPLEX" />
       </list>
     </recent_temporary>
   </component>
